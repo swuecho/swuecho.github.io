@@ -1,13 +1,19 @@
 ---
 layout: post
 title:  "Ocaml module In_Channel"
-date:   2014-05-11 15:47:00
+date:   2014-05-11 15:45:00
 categories: tech
 ---
 
+ have to have some line in the doc, not code only
 
 {% highlight ocaml %}
-module M :                                                                                                                                                                                                                                    sig                                                                                                                                                                                                                                           type t = in_channel
+
+
+utop # module M = In_channel;;
+module M :
+   sig
+    type t = in_channel
     val stdin : t
     val create : ?binary:bool -> string -> t
     val with_file : ?binary:bool -> string -> f:(t -> 'a) -> 'a
@@ -20,7 +26,8 @@ module M :                                                                      
     val unsafe_input_value : t -> 'a option
     val input_all : t -> string
     val input_line : ?fix_win_eol:bool -> t -> string option
-    val fold_lines : ?fix_win_eol:bool -> t -> init:'a -> f:('a -> string -> 'a) -> 'a
+    val fold_lines :
+      ?fix_win_eol:bool -> t -> init:'a -> f:('a -> string -> 'a) -> 'a
     val input_lines : ?fix_win_eol:bool -> t -> string list
     val iter_lines : ?fix_win_eol:bool -> t -> f:(string -> unit) -> unit
     val seek : t -> int64 -> unit
@@ -30,5 +37,6 @@ module M :                                                                      
     val read_lines : string -> string list
     val read_all : string -> string
   end
+
 
 {% endhighlight %}
