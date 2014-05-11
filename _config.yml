@@ -4,6 +4,7 @@ email: echowuhao@gmail.com
 description: "record of life"
 baseurl: ""
 url: "http://yourdomain.com"
+username: swuecho
 
 # Build settings
 markdown: kramdown
