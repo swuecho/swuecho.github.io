@@ -12,7 +12,8 @@ categories: tech
 
 utop # module M = Out_channel;;
 module M :  
-sig                                                                                                                                                                                                                                           type t = out_channel
+   sig
+    type t = out_channel
     val stdout : t
     val stderr : t
     type 'a with_create_args = ?binary:bool -> ?append:bool -> ?perm:int -> 'a
