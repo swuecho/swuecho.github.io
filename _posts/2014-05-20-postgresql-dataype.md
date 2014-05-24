@@ -4,10 +4,9 @@ title:  "PostgreSQL"
 date:   2014-05-20 15:52:00
 categories: tech 
 ---
-what is wrong with this?
 
 
-<DIV ALIGN="CENTER"><A NAME="20987">&#160;</A>
+<div>
 <TABLE>
 <CAPTION><STRONG>Table:</STRONG>
 Common data types in PostgreSQL</CAPTION>
@@ -58,3 +57,4 @@ Common data types in PostgreSQL</CAPTION>
 <P>
 <P></TD></TR>
 </TABLE>
+</div>
