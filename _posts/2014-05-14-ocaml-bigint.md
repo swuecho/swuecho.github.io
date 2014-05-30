@@ -9,7 +9,9 @@ categories: tech
 
 {% highlight ocaml %}
 utop [18]: module M = Big_int;;
-module M :                                                                        sig                                                                               type big_int = Big_int.big_int                                              
+module M : 
+    sig 
+    type big_int = Big_int.big_int 
     val zero_big_int : big_int
     val unit_big_int : big_int
     val minus_big_int : big_int -> big_int
