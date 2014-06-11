@@ -9,15 +9,21 @@ categories: tech
 
 {% highlight ocaml %}
 utop [19]: User.last_name me;;
-- : string = "Wu"                                                                                                                                     utop [20]: User.first_name me;;
-- : string = "Hao"                                                                                                                                    utop [21]: me.User.first_name;;
-- : string = "Hao"                                                                                                                                    utop [22]: me.User.last_name;;
-- : string = "Wu"                                                                                                                                     utop [23]: User.Fields.names;;
+- : string = "Wu"
+  utop [20]: User.first_name me;;
+- : string = "Hao" 
+  utop [21]: me.User.first_name;;
+- : string = "Hao" 
+  utop [22]: me.User.last_name;;
+- : string = "Wu"
+  utop [23]: User.Fields.names;;
 - : string list = ["first_name"; "last_name"]    
 
 utop [32]: Field.get User.Fields.first_name;;
-- : User.t -> string = <fun>                                                                                                                          utop [33]: User.first_name;;
-- : User.t -> string = <fun>                                                                                                                          utop [34]: User.first_name me;;
+- : User.t -> string = <fun> 
+  utop [33]: User.first_name;;
+- : User.t -> string = <fun> 
+  utop [34]: User.first_name me;;
 - : string = "Hao"   
 
 {% endhighlight %}
