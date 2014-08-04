@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "postgresql"
+title:  "postgresql data type"
 date:   2014-05-20 15:52:00
 categories: tech 
 ---
