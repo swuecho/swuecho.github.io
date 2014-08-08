@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  psql  
+title:  psql commanand line
 date:   2014-08-04 14:08:00
 categories: tech 
 ---
 
 Common psql command line 
 
-{% highlight bash %}
+{% highlight sql %}
 
 # List of databases 
 \l  
@@ -63,4 +63,9 @@ hao_70=> \d report
  report_id       | integer                | 
  url             | text                   |
  title           | character varying(100) |
+
+TODO: ;
+# watch the query every sencond 
+select * from dataset; \watch 1; 
+
 {% endhighlight %}

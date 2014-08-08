@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ssh publickey set up
+title:  SSH Publickey Set Up
 date:   2014-08-08 10:20 
 categories: tech 
 ---
