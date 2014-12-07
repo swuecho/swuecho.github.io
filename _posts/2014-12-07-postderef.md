@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  [Perl 5.20] 后缀解引用语法
+title:  Perl 5.20 后缀解引用语法
 date:   2014-12-07 15:11 
 categories: tech 
 ---
