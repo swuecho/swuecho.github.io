@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  分享几个Perl小技巧
-date:   2014-12-07 15:10 
+date:   2014-12-04 15:10 
 categories: tech 
 ---
 
