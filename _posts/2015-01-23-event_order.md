@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  [ExtJS] the event order
+title:  ExtJS, the event order
 date:   2015-01-23 21:08 
 categories: tech 
 ---
+
 Below is the script to get the event order of Ext.Component
 
 {% highlight javascript %}
