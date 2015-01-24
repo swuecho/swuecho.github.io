@@ -32,7 +32,7 @@ var comp = Ext.create('Ext.Component', {
 
 
 
-<iframe> src="https://fiddle.sencha.com/fiddle/h28"></iframe>
+https://fiddle.sencha.com/fiddle/h28
 
 ## todo
 
