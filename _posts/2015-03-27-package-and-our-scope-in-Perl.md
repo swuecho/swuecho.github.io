@@ -34,7 +34,7 @@ package Bar {
 
 Obviously, perldoc give detailed explaination.
 
-<code>
+<pre>
     package NAMESPACE
     package NAMESPACE VERSION
     package NAMESPACE BLOCK
@@ -75,4 +75,4 @@ Obviously, perldoc give detailed explaination.
 
             See "Packages" in perlmod for more information about packages,
             modules, and classes. See perlsub for other scoping issues.
-</code>
+</pre>
