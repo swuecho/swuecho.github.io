@@ -10,6 +10,7 @@ permalink: /Util/
  <fieldset>
   <legend> translator </legend>
   Number: <input type="number"><br>
+  <button name="button" onclick="alert(writtenNumber(1234))"> translate </button>
  </fieldset>
 </form>
 
