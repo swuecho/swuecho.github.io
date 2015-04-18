@@ -7,7 +7,7 @@ permalink: /Util/
 ### Arabic Number to Written Number translator
 
  <fieldset>
-  <legend> translator </legend>
+  <legend> <em>Translator<em> </legend>
   Number: <input id='number' type="number"><br>
   <button onclick="util_translate()"> translate </button>
  </fieldset>

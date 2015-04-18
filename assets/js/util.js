@@ -2,7 +2,6 @@
 /*
 js written number is copied from 
 https://raw.githubusercontent.com/swuecho/js-written-number/master/lib/index.js
-
 */
 var baseCardinals = {
   0: 'zero',
@@ -95,9 +94,6 @@ function writtenNumber(n, noAnd) {
   }
   return ret.reverse().join(' ');
 }
-
-console.log(writtenNumber(123));
-console.log(writtenNumber(1230));
 
 /*
 The MIT License (MIT)
