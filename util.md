@@ -3,9 +3,12 @@ layout: page
 title: Util 
 permalink: /Util/
 ---
+
+### Arabic Number to Written Number translator
+
 <form>
  <fieldset>
-  <legend>Arabic Number to Written Number translator</legend>
+  <legend> translator </legend>
   Number: <input type="number"><br>
  </fieldset>
 </form>
