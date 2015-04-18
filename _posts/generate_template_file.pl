@@ -1,4 +1,4 @@
-use v5.20;
+use v5.18;
 use POSIX qw(strftime);
 if (not defined $ARGV[0]) {
     die "please give the tile"
