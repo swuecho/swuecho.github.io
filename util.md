@@ -17,10 +17,8 @@ permalink: /Util/
 
 <script>
 function translate() {
-	console.log('here');
 	var number = document.getElementById('number').value;
-	console.log(number);
-	document.getElementById("result").innerHTML = writtenNumber(number);
+	document.getElementById("result").innerHTML = number + ' : <br/> '+ writtenNumber(number);
 }
 </script>
 
