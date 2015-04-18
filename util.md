@@ -19,7 +19,7 @@ permalink: /Util/
 <script>
 function translate() {
 	var number = document.getElementById('number').value;
-	document.getElementById("demo").innerHTML = writtenNumber(number);
+	document.getElementById("result").innerHTML = writtenNumber(number);
 }
 </script>
 
