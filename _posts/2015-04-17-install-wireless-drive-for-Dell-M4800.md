@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  install wireless drive for Dell M4800
+title:  Install Wireless Driver for Dell M4800
  
 date:   2015-04-17 20:31 
 categories: tech 
@@ -9,7 +9,7 @@ spend a lot of time to do it, finally get it right.
 
 the most important thing I miss is the driver depend on linux kernel, so that means if you upgrade your kernel to a newer version than the offical ubuntu release. you may want to downgrade your kernel.
 
-see the kernel version (Ubuntu 14.04)
+### check the kernel version (Ubuntu 14.04)
 
 {% highlight bash %}
 
@@ -19,7 +19,7 @@ Linux IS 3.16.0-34-generic #47~14.04.1-Ubuntu SMP Fri Apr 10 17:49:16 UTC 2015 x
 
 {% endhighlight %}
 
-then install driver 
+### then install driver 
 
 {% highlight bash %}
 
@@ -27,6 +27,7 @@ sudo apt-get install bcmwl-kernel-source
 
 {% endhighlight %}
 
+## show all the pci information
 
 {% highlight bash %}
 lspci -nnk
