@@ -10,7 +10,7 @@ permalink: /Util/
  <fieldset>
   <legend> translator </legend>
   Number: <input id='number' type="number"><br>
-  <button name="button" onclick="translate"> translate </button>
+  <button name="button" onclick="translate()"> translate </button>
  </fieldset>
 </form>
   <p id="result"></p>
