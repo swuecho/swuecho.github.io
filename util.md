@@ -6,14 +6,12 @@ permalink: /Util/
 
 ### Arabic Number to Written Number translator
 
-<form>
  <fieldset>
   <legend> translator </legend>
   Number: <input id='number' type="number"><br>
   <button onclick="util_translate()"> translate </button>
  </fieldset>
-</form>
-  <p id="result"></p>
+ <p id="result"></p>
 
 <script>
 function util_translate() {
