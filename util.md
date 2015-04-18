@@ -10,13 +10,14 @@ permalink: /Util/
  <fieldset>
   <legend> translator </legend>
   Number: <input id='number' type="number"><br>
-  <button name="button" onclick="translate()"> translate </button>
+  <button name="button" onclick="translate"> translate </button>
  </fieldset>
 </form>
   <p id="result"></p>
 
 <script>
 function translate() {
+	console.log('here');
 	var number = document.getElementById('number').value;
 	console.log(number);
 	document.getElementById("result").innerHTML = writtenNumber(number);
