@@ -13,4 +13,4 @@ permalink: /Util/
 <a href= "" > 简历</a>
 
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="/asserts/js/util.js"></script>
+<script src="/assets/js/util.js"></script>
