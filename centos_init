@@ -1,0 +1,11 @@
+
+useradd hwu
+passwd hwu
+
+# allow hwu to run any command anywhere
+
+
+hwu     ALL=(ALL)       ALL
+
+
+ssh-copy-id user@host
