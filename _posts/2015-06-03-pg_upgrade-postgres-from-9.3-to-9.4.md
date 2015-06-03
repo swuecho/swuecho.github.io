@@ -5,7 +5,7 @@ date:   2015-06-03 19:25
 categories: tech 
 ---
 
-Take a snapshot using virutalbox if you are worried about the data loss.
+# Take a snapshot using virutalbox if you are worried about the data loss.
 
 {% highlight bash %}
 
@@ -35,7 +35,11 @@ cd
 
 # run the upgrade
 
-/usr/pgsql-9.4/bin/pg_upgrade -b /usr/pgsql-9.3/bin -B /usr/pgsql-9.4/bin -d /var/lib/pgsql/9.3/data  -D /var/lib/pgsql/9.4/data -p 5432 -P 5433 --user=postgres
+/usr/pgsql-9.4/bin/pg_upgrade -b /usr/pgsql-9.3/bin \ 
+                              -B /usr/pgsql-9.4/bin -d /var/lib/pgsql/9.3/data \
+                              -D /var/lib/pgsql/9.4/data 
+                              -p 5432 -P 5433 
+                               --user=postgres
 
 su $YOU
 
@@ -61,8 +65,8 @@ sudo rm -rf /etc/yum.repos.d/pgdg-93-centos.repo
 
 {% endhighlight %}
 
-# postgres basic 
 
+# postgres basic 
 
 all the config file is in the pddata dir, including pg_hba.conf postgresql.conf
 
