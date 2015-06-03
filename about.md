@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: About
 permalink: /about/
@@ -11,5 +11,4 @@ permalink: /about/
 毕业后到现在做软件开发。
 
 
-<a href= "" > 简历</a>
-
+![简历](/assets/file/Hao_cv.pdf)
