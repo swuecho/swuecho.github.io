@@ -10,5 +10,6 @@ permalink: /about/
 我学习植物保护四年，昆虫学两年，
 毕业后到现在做软件开发。
 
+<a href= "/assets/file/Hao_cv.pdf" > 简历</a>
 
-![简历](/assets/file/Hao_cv.pdf)
+
