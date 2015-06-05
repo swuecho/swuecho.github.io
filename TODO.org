@@ -1,2 +1,3 @@
 * TODO: virtual box nat, port forwarding 443,22,80
 * add content to about.md, make is show in the main pag
+* perl list::Util, the magic of list in perl
