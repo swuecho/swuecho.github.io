@@ -7,7 +7,7 @@ categories: tech
 
 accidently run autoremove,
 
-   sudo apt-get install autoremove
+    sudo apt-get install autoremove
 
 suddenly, I can not login in any more.
 
@@ -33,7 +33,7 @@ the annoying part is the greater is not the default ubuntu unity greeter any mor
 will remove the xubuntu greater. the bad part is I can not find the above command line by googling easily.
 
 
-I end up reinstall my laptop.
+I end up reinstalling my laptop.
 
 
 
