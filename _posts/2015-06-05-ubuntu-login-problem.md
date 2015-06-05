@@ -32,7 +32,6 @@ the annoying part is the greater is not the default ubuntu unity greeter any mor
 
 will remove the xubuntu greater. the bad part is I can not find the above command line by googling easily.
 
-
 I end up reinstall my laptop.
 
 
