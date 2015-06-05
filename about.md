@@ -11,6 +11,7 @@ permalink: /about/
 毕业后到现在做软件开发。
 
 <h3>More<h3>
-<a href="/assets/file/Hao_cv.pdf">Resume</a>
+
+    <a href="/assets/file/Hao_cv.pdf">Resume</a>
 
 
