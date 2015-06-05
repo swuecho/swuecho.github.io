@@ -12,6 +12,5 @@ permalink: /about/
 
 <h3>More<h3>
 
-    <a href="/assets/file/Hao_cv.pdf">Resume</a>
 
 
