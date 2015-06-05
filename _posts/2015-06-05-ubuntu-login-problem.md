@@ -5,9 +5,10 @@ date: 2015-06-05 13:19
 categories: tech 
 ---
 
+accidently run autoremove,
+
    sudo apt-get install autoremove
 
-accidently run autoremove, then
 suddenly, I can not login in any more.
 
 the first thing to do is check the log when something goes wrong, but I did not do this until all the google search result fails.
