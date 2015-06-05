@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Util 
-permalink: /Util/
+title: Tool
+permalink: /tool/
 ---
 
 ### Arabic Number to Written Number translator
