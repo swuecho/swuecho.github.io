@@ -57,11 +57,11 @@ the number is 112, subtype checking at type_coerce.pl line 4.
 112
 {% endhighlight %}
 
-<p>the part after __END__ is  the result, let's see what happens.
+<p>the part after __END__ is  the result, let's see what happens.</p>
 
 
 first,  when moose find a value of an attribute, it will check if it is pass the type validation.
-that is what happens as in the first line of the result.</p>
+that is what happens as in the first line of the result.
 
 then moose find the value given can not pass validation and there is a coerce, so moose try to coerce.
 as in the second line of the result.
