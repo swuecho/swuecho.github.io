@@ -1,8 +1,8 @@
 --- 
-layout  : post 
-title  : moose type an coerce 
-date  : 2015 - 06 - 07 21 : 04 
-categories  : tech
+layout: post 
+title: moose type and coerce 
+date: 2015-06-07 21:04 
+categories: tech
 ---
 
 firstly, what is type and coerce?
