@@ -9,7 +9,7 @@ firstly, what is type and coerce?
 
 let's see what is in the moose doc(Moose::Manual::Types)
 
-### TYPE
+### Type
 
 It's important to realize that types are not classes( or packages ). 
 Types are just objects( Moose::Meta::TypeConstraint objects, to be exact )
@@ -22,7 +22,7 @@ s) will be checked first, followed by constraints defined by the subtype. A valu
 Typically, a subtype takes the parent's constraint and makes it more specific. --from moose doc
 
 
-### COERCION
+### Coercion
 
 A coercion lets you tell Moose to automatically convert one type to another.
 
@@ -62,7 +62,7 @@ the number is 112, subtype checking at type_coerce.pl line 4.
 
 <p>the part after __END__ is  the result, let's see what happens.
 first,  when moose find a value of an attribute, it will check if it is pass the type validation.
-that is what happens as in the first line of the result.
+that is what happens as in the first line of the result.</p>
 
 then moose find the value given can not pass validation and there is a coerce, so moose try to coerce.
 as in the second line of the result.
