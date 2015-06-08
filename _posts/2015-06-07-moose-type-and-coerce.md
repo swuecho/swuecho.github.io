@@ -11,15 +11,12 @@ let's see what is in the moose doc(Moose::Manual::Types)
 
 ### Type
 
-It's important to realize that types are not classes( or packages ). 
-Types are just objects( Moose::Meta::TypeConstraint objects, to be exact )
-with a name and a constraint. Moose maintains a global type registry that lets it convert names like Num into the appropriate object
+It's important to realize that types are not classes(or packages). Types are just objects( Moose::Meta::TypeConstraint objects, to be exact ) with a name and a constraint. Moose maintains a global type registry that lets it convert names like Num into the appropriate object
 
 ### Subtype
 
-A subtype is defined in terms of a parent type  and a constraint . Any constraints defined by the parent(
-s) will be checked first, followed by constraints defined by the subtype. A value must pass all of these checks to be valid for the subtype.
-Typically, a subtype takes the parent's constraint and makes it more specific. --from moose doc
+A subtype is defined in terms of a parent type  and a constraint . Any constraints defined by the parent(s) will be checked first, followed by constraints defined by the subtype. A value must pass all of these checks to be valid for the subtype.
+Typically, a subtype takes the parent's constraint and makes it more specific. 
 
 
 ### Coercion
