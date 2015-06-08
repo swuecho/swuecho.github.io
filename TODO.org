@@ -2,3 +2,5 @@
 * add content to about.md, make is show in the main pag
 * perl list::Util, the magic of list in perl
 * git bisect
+* add suprot to requirejs
+* javascript canvas
