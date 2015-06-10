@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  some useful bash 
-date:   2015-06-10 02:03 
+date:   2015-06-09 23:03 
 categories: tech 
 ---
 
