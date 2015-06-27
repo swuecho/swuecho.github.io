@@ -34,6 +34,18 @@ will remove the xubuntu greater. the bad part is I can not find the above comman
 
 I end up reinstalling my laptop.
 
+However, the install is not very smooth either.
+
+I create the usb installer following the ubuntu offical doc. I know I have to change the boot order. make USB HDD comes first.
+
+Somehow, when I install, the install lead me to busybox. totally lost.
+
+Accidently, I unplug the usb and put it into another usp port. suddenly, the install interface appears. HaHa!
+
+so the lesson is you have to be careful about which usb port to either too.
+
+this end my several days fighting with ubuntu login loop.
+
 
 
 
