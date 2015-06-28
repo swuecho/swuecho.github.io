@@ -31,12 +31,17 @@ var comp = Ext.create('Ext.Component', {
 {% endhighlight %}
 
 
-
 https://fiddle.sencha.com/fiddle/h28
 
-## todo
 
-1. add all event.
-2. how event works
+## rant
+
+After writing ExtJs code for about 3 years, I still do not like it.
+
+The worest thing about Sencha is they are agaist developers. 
+
+Hope they will dies soon, so I do not have to deal with their code or their way of writing spa.
+
+
 
 
