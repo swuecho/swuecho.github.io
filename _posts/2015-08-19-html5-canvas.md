@@ -10,7 +10,7 @@ HTML5 canvas example
 <canvas id="mycanvas"> </canvas>
 
 {% highlight javascript %}
-        var mycanvas = document.getElementById("canvas");
+        var mycanvas = document.getElementById("mycanvas");
         var mycontext = mycanvas.getContext("2d");
 
         mycontext.beginPath();
@@ -29,7 +29,7 @@ HTML5 canvas example
 {% endhighlight %}
     
 <script>
-        var mycanvas = document.getElementById("canvas");
+        var mycanvas = document.getElementById("mycanvas");
         var mycontext = mycanvas.getContext("2d");
 
         mycontext.beginPath();
