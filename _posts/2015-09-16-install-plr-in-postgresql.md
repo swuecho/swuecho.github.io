@@ -16,11 +16,9 @@ sudo yum install R
 
 {% endhighlight %}
  
-
-
-## make sure postgresql94-devel is installed, so we can use PGXS
  
 {% highlight bash %}
+## make sure postgresql94-devel is installed, so we can use PGXS
 sudo yum install postgresql94-devel
 {% endhighlight %}
 
@@ -38,7 +36,7 @@ echo 'PATH=/usr/pgsql-9.4/bin/:$PATH; USE_PGXS=1 make install' | sudo sh
 {% endhighlight %}
  
  
-## create extension in v70 db
+## create extension in db
  
 {% highlight bash %}
 
