@@ -22,7 +22,7 @@ sudo yum install R
 sudo yum install postgresql94-devel
 {% endhighlight %}
 
-# install plr
+## install plr
 
 {% highlight bash %}
 
