@@ -6,6 +6,9 @@ baseurl: ""
 url: "http://blog.meihao.us"
 username: swuecho
 
+paginate: 10
+paginate_path: "/blog/page:num/"
+
 # Build settings
 markdown: kramdown
 permalink: date 
