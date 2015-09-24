@@ -14,5 +14,5 @@ So, this is another attempt to try to form the habit.
 
 I live with a Chinese family. They have friends and sometimes we picnic together. During the talk with them, I realize how important it is the environment.  The environment determine so much about what you do and without you, the body, notice it.
 
-In order to be a better environment, you have to be a better self.
+In order to be in a better environment, you have to be a better self.
 
