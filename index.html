@@ -7,9 +7,8 @@ layout: default
     <!-- This loops through the paginated posts -->
     {% for post in paginator.posts %}
         <li>
-           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-            {{ post.excerpt }}
+           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </li>
     {% endfor %}
     </ul>
