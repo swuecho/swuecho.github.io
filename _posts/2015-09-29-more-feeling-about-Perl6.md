@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  more feeling about Perl6 
+title:  More Feeling about Perl6 
 date:   2015-09-29 11:17 
 categories: tech 
 ---
@@ -12,9 +12,9 @@ The book is very good, at least for me. It is the best book avaiable, offering a
 Now, Due to there is a talk about Perl6 in the Orange County Perl Mongers, I want to refresh.
 
 
-I am a bit frustrated by the fast change in Perl6. hopfully, this is the last major change. 
-I am saying "GLR". The more I write Perl and Perl6, the more I feel auto flattern is probably not a good idea. 
-It is very convient when it does not bite you. once you got bite, it is very hurt.
+I am a bit frustrated by the fast change in Perl6. hopfully, this is the last major change. I am saying "GLR". 
+The more I write Perl and Perl6, the more I feel auto flattern is probably not a good idea.
+ It is very convient when it does not bite you. once you got bite, it is very hurt.
 
 another complain is the language now is too big. Compared to other language, I think Perl is big too. 
 However, I think Larry have extradinary power to expain thing in a very clear and practical way. 
@@ -22,18 +22,19 @@ I understand if you want to achieve big, you can not avoid the complex in it. Th
 So language is big will be a feature when Larry explain it in details.
 
 
-Of course, there are many good staff. the most impressive to me is the error message. It guide me, a perl 5 programer, to write correct 
-code.
+Of course, there are many good staff. the most impressive to me is the error message. 
+It guide me, a perl 5 programer, to write correct code.
 
 I am still in the way to get used to or relearn the ref vs %hash vs @array vs List. 
 
-# Quiz and my code
+### Quiz and my code
 
 The [quiz](http://www.metracom.com/august_challenge.html):
 
 my code;
 
-{% highlight bash %}
+{% highlight perl %}
+
 # run on This is perl6 version 2015.09-163-gcd8ce4e built on MoarVM version 2015.09-39-g1434283
 
 use v6;
@@ -117,5 +118,6 @@ for ^5 -> $g {
    for @games[$g] { $_>>.say } ;
    say '------------------------------';
 }
+
 {% endhighlight %}
 
