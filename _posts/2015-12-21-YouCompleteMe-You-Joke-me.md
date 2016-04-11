@@ -44,4 +44,6 @@ then check the full install guide, I know, I have to install newer libclang. I h
 
 
 
+Update: When I was reintall it, it will not compile. In the end I found the problem was not enought memory in my vm. 
+create an swap partition solved the problem.
 
