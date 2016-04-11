@@ -37,7 +37,7 @@ ImportError: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.18' 
 in /tmp/ycm_temp/xxxx_stderr.log
 
 then check the full install guide, I know, I have to install newer libclang. I have to give up and rerun
-<code> ./install.py <code> instead
+<code> ./install.py </code> instead
 
 
 2 hour passed!!! What is the fuck!!!! You Joke Me!
