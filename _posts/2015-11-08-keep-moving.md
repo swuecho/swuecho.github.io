@@ -9,11 +9,11 @@ I move a lot in recent years, it take a lot of time and energy to move.
 
 However, I find moving is good thing for me.
 
-## move means say goodbye to old thing and habit, and face new.
+move means say goodbye to old thing and habit, and face new.
 
 something can be changed in the process
 
-## move may bring new opportunities
+may bring new opportunities
 
 {% highlight bash %}
 
