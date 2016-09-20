@@ -7,7 +7,7 @@ categories: tech
 
 NOTE: the data in this blog come from  http://postgresguide.com/tips/window.html
 
-{% highlight bash %}
+{% highlight python %}
 hwu=# select * from demo_sales ;
  last_name | salary | department | rank
 -----------+--------+------------+------
@@ -21,7 +21,7 @@ hwu=# select * from demo_sales ;
 
 
 ## group by 
-{% highlight bash %}
+{% highlight python %}
 hwu=# select department, sum(salary) from demo_sales group by department;
  department |  sum
 ------------+--------
@@ -34,7 +34,7 @@ hwu=# select department, sum(salary) from demo_sales group by department;
 
 ## aggregate window function
 
-{% highlight bash %}
+{% highlight python %}
 hwu=# select last_name,department, sum(salary) OVER (PARTITION BY department) from demo_sales;
  last_name | department |  sum
 -----------+------------+--------
@@ -54,7 +54,7 @@ compare the query above and try to understand this from postgresql manual "A win
 ## window function with order by
 
 seems if 'order by' is addded. the aggreage funciton is called on the rows in the partition to current row, instead all of them
-{% highlight bash %}
+{% highlight python %}
 hwu=# select last_name,department, sum(salary) OVER (PARTITION BY department order by salary) from demo_sales;
  last_name | department |  sum
 -----------+------------+--------
@@ -67,3 +67,19 @@ hwu=# select last_name,department, sum(salary) OVER (PARTITION BY department ord
 
 {% endhighlight %}
 
+
+PS: the code to insert the data to postgresql without write query.
+
+{% highlight python %}
+# turn a csv to a table in postgresql database
+import pandas
+from sqlalchemy import create_engine
+import os
+
+db_string = os.environ['DATABASE_URL']
+conn = create_engine(db_string).connect()
+
+df = pandas.read_csv("./group_data.csv")
+df.to_sql('demo_sales', conn, index=False)
+
+{% endhighlight %}
