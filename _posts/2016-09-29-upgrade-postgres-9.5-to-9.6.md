@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  upgrade postgres-9.5 to 9.6 
+title:  upgrade postgres-9.5 to 9.6 in ubuntu
 date:   2016-09-29 11:14 
 categories: tech 
 ---
@@ -55,4 +55,5 @@ and then,  chage peer to trust, and the change back to 'md5'
 
 
 ## finally, restart to db
+
     sudo service postgresql start
