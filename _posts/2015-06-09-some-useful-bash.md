@@ -7,13 +7,13 @@ categories: tech
 
 ### run a script for 10 times
 
-{% highlight bash %}
+```{bash}
 for i in `seq 1 10`; do perl 81_rand_log_id.t ; done
 ```
 
 ### watch
 
-{% highlight bash %}
+```{bash}
 ### those is from man wacth
 To watch for mail, you might do
 

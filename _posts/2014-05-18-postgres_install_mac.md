@@ -51,7 +51,7 @@ connenct to a db
 
 ## create a table
 
-{% highlight SQL %}
+```{SQL}
 
     CREATE TABLE limbs ( thing VARCHAR(20), legs  INT, arms  INT);
 
@@ -72,7 +72,7 @@ connenct to a db
 
 # basic query to verify the insertion
 
-{% highlight SQL %}
+```{SQL}
 cookbook=# select * from limbs;
     thing     | legs | arms
 --------------+------+------

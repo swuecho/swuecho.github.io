@@ -7,7 +7,7 @@ categories: tech
 
 # Take a snapshot using virutalbox if you are worried about the data loss.
 
-{% highlight bash %}
+```{bash}
 
 # add 9.4 repo
 

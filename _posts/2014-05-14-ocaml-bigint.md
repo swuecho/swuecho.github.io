@@ -7,7 +7,7 @@ categories: tech
 
 # load "nums.cma";;
 
-{% highlight ocaml %}
+```{ocaml}
 utop [18]: module M = Big_int;;
 module M : 
     sig 

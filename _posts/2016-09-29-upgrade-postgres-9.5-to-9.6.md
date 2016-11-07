@@ -14,7 +14,7 @@ sudo service postgresql start
 
 ## dump all the data
 
-{% highlight bash %}
+```{bash}
 pg_dumpall >9.5.db
 ```
 

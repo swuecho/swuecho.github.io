@@ -9,7 +9,7 @@ HTML5 canvas example
 
 <canvas id="mycanvas"> </canvas>
 
-{% highlight javascript %}
+```{javascript}
         var mycanvas = document.getElementById("mycanvas");
         var mycontext = mycanvas.getContext("2d");
 

@@ -18,7 +18,7 @@ date:   $time
 categories: tech 
 ---
 
-{% highlight bash %}
+```{bash}
 
 ```
 

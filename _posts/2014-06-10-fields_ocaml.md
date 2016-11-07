@@ -7,7 +7,7 @@ categories: tech
 
 # useful but strange
 
-{% highlight ocaml %}
+```{ocaml}
 utop [19]: User.last_name me;;
 - : string = "Wu"
   utop [20]: User.first_name me;;
@@ -28,7 +28,7 @@ utop [32]: Field.get User.Fields.first_name;;
 
 ```
 
-{% highlight ocaml %}
+```{ocaml}
 
 utop [1]: module User = struct
 type t = { first_name : string; last_name:string } with fields

@@ -6,7 +6,7 @@ categories: tech
 ---
 ### the moose role
 
-{% highlight bash %}
+```{bash}
 package TOJSON;
 use Moose::Role;
 
@@ -25,7 +25,7 @@ sub TO_JSON {
 
 ### use the role
 
-{% highlight bash %}
+```{bash}
 
 package Point {
 
