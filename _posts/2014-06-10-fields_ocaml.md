@@ -26,7 +26,7 @@ utop [32]: Field.get User.Fields.first_name;;
   utop [34]: User.first_name me;;
 - : string = "Hao"   
 
-{% endhighlight %}
+```
 
 {% highlight ocaml %}
 
@@ -81,4 +81,4 @@ type t = { first_name : string; last_name : string; }
       end
   end
 
-{% endhighlight %}
+```

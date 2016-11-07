@@ -55,7 +55,7 @@ the number is 12, subtype checking at type_coerce.pl line 4.
 the number is 12, coercing at type_coerce.pl line 7.
 the number is 112, subtype checking at type_coerce.pl line 4.
 112
-{% endhighlight %}
+```
 
 <p>the part after __END__ is  the result, let's see what happens.</p>
 

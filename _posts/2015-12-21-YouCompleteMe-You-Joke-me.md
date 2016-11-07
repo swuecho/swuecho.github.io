@@ -32,7 +32,7 @@ I see
 
 {% highlight bash %}
 ImportError: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.18' not found (required by /home/hwu/dotfiles/vim/.vim/bundle/YouCompleteMe/third_party/ycmd/ycmd/../lib    clang.so.3.7)
-{% endhighlight %}
+```
 
 in /tmp/ycm_temp/xxxx_stderr.log
 

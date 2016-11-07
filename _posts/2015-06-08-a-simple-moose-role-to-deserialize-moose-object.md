@@ -21,7 +21,7 @@ sub TO_JSON {
 
 1;
 
-{% endhighlight %}
+```
 
 ### use the role
 
@@ -44,5 +44,5 @@ use DDP;
 my $p = Point->new( { new => 1, x => 1, y => 2 } );
 p $p->TO_JSON;
 
-{% endhighlight %}
+```
 

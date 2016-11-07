@@ -22,5 +22,5 @@ git checkout legacy
 sudo scons --sharedclient --prefix=/usr/local install
 sudo ldconfig
 
-{% endhighlight %}
+```
 

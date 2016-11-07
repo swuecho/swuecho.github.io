@@ -17,7 +17,7 @@ uname -a
 
 Linux IS 3.16.0-34-generic #47~14.04.1-Ubuntu SMP Fri Apr 10 17:49:16 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
 
-{% endhighlight %}
+```
 
 ### then install driver 
 
@@ -25,7 +25,7 @@ Linux IS 3.16.0-34-generic #47~14.04.1-Ubuntu SMP Fri Apr 10 17:49:16 UTC 2015 x
 
 sudo apt-get install bcmwl-kernel-source
 
-{% endhighlight %}
+```
 
 ## show all the pci information
 
@@ -93,4 +93,4 @@ lspci -nnk
 	Subsystem: Dell Device [1028:05cc]
 	Kernel driver in use: sdhci-pci
 
-{% endhighlight %}
+```

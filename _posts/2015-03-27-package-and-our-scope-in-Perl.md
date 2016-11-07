@@ -17,7 +17,7 @@ package Bar;
     print $bar;    # prints 20, as it refers to $Foo::bar
 
 
-{% endhighlight %}
+```
 
 I thought package scope without <em>{}</em> is the same with it, but it is not.
 
@@ -30,7 +30,7 @@ package Bar {
     print $bar;    # prints nothing, as it refer to $bar, which is not defined  
 }
 
-{% endhighlight %}
+```
 
 Obviously, perldoc give detailed explaination.
 

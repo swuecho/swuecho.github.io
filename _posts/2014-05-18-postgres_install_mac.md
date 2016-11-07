@@ -68,7 +68,7 @@ connenct to a db
     INSERT INTO limbs (thing,legs,arms) VALUES('Peg Leg Pete',1,2);
     INSERT INTO limbs (thing,legs,arms) VALUES('space alien',NULL,NULL);
 
-{% endhighlight %}
+```
 
 # basic query to verify the insertion
 
@@ -90,4 +90,4 @@ cookbook=# select * from limbs;
  space alien  |      |
 (12 rows)
 
-{% endhighlight %}
+```

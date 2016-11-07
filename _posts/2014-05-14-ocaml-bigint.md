@@ -70,4 +70,4 @@ module M :
     val approx_big_int : int -> big_int -> string
   end
 
-{% endhighlight %}
+```

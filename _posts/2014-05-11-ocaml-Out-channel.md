@@ -36,4 +36,4 @@ module M :
     val write_lines : string -> string list -> unit
     val write_all : string -> data:string -> unit
   end
-{% endhighlight %}
+```

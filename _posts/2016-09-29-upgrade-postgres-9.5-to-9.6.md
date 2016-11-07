@@ -16,7 +16,7 @@ sudo service postgresql start
 
 {% highlight bash %}
 pg_dumpall >9.5.db
-{% endhighlight %}
+```
 
 ## fix pg_hba
 

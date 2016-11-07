@@ -28,7 +28,7 @@ var comp = Ext.create('Ext.Component', {
     }
 });
  
-{% endhighlight %}
+```
 
 
 https://fiddle.sencha.com/fiddle/h28

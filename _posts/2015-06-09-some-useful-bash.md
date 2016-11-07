@@ -9,7 +9,7 @@ categories: tech
 
 {% highlight bash %}
 for i in `seq 1 10`; do perl 81_rand_log_id.t ; done
-{% endhighlight %}
+```
 
 ### watch
 
@@ -28,4 +28,4 @@ If you're only interested in files owned by user joe, you might use
               watch -d 'ls -l | fgrep joe'
 
 
-{% endhighlight %}
+```

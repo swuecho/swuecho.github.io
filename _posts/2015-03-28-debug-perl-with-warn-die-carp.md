@@ -11,7 +11,7 @@ so, when you are debuging in Perl, <code> say </code> is essential.
 
 {% highlight bash %}
 
-{% endhighlight %}
+```
 
 
 ## warnor die

@@ -21,5 +21,5 @@ Send Email using elisp script
     (mail-text) (insert "body of mail")
     (mail-send))
 
-{% endhighlight %}
+```
 

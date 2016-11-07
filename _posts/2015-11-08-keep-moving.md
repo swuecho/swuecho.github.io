@@ -17,5 +17,5 @@ may bring new opportunities
 
 {% highlight bash %}
 
-{% endhighlight %}
+```
 

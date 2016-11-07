@@ -68,7 +68,7 @@ my $observer2 = Observer2->new->register($subject);
 
 $subject->notify_observers('test');
 
-{% endhighlight %}
+```
 
 
 
@@ -108,5 +108,5 @@ $emitter->on( 'greet', sub ($name) { say( 'Hello, ' . $name . '!' ); } );
 $emitter->on( 'greet', sub ($name) { say( 'World, ' . $name . '!' ); } );
 
 $emitter->emit( 'greet', $_ ) for qw( foo bar baz);
-{% endhighlight %}
+```
 

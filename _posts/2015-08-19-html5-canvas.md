@@ -26,7 +26,7 @@ HTML5 canvas example
 
     # code from html5 cookbook
 
-{% endhighlight %}
+```
     
 <script>
         var mycanvas = document.getElementById("mycanvas");

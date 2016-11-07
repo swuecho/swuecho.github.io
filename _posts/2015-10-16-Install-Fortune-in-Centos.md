@@ -13,5 +13,5 @@ It is weried that fortune is named as fortune-mod
 
     sudo yum install fortune-mod
 
-{% endhighlight %}
+```
 

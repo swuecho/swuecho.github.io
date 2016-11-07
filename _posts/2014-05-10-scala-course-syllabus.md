@@ -64,6 +64,6 @@ then perl onliner.
  ls | perl -aF/Lecture/ -e 'print $F[1]' | perl -n -E 'chomp;s/\(.*//;say "<li>$_</li>"'
 
  ls | perl -aF/Lecture/ -E 'say "<li>" . $F[1]=~s/\(.*//rsg . "</li>"'
-{% endhighlight %}
+```
 
 ![](/assets/img/scala_course_syllabus_02.png)
