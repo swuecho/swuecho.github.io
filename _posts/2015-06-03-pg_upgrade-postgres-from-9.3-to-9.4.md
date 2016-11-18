@@ -7,7 +7,7 @@ categories: tech
 
 # Take a snapshot using virutalbox if you are worried about the data loss.
 
-{% highlight bash %}
+```{bash}
 
 # add 9.4 repo
 
@@ -63,7 +63,7 @@ sudo rm -rf /etc/yum.repos.d/pgdg-93-centos.repo
 # su - 
 # rm -rf  /var/lib/pgsql/9.3/data
 
-{% endhighlight %}
+```
 
 
 # postgres basic 

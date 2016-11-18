@@ -7,7 +7,7 @@ categories: tech
 
 When I come across *our*, I find I not quite understand it, so <code> perldoc -f our</code>
 
-{% highlight perl %}
+```{perl}
 
 
 package Foo;
@@ -17,11 +17,11 @@ package Bar;
     print $bar;    # prints 20, as it refers to $Foo::bar
 
 
-{% endhighlight %}
+```
 
 I thought package scope without <em>{}</em> is the same with it, but it is not.
 
-{% highlight perl %}
+```{perl}
 package Foo {
     our $bar;      # declares $Foo::bar for rest of lexical scope
     $bar = 20;
@@ -30,7 +30,7 @@ package Bar {
     print $bar;    # prints nothing, as it refer to $bar, which is not defined  
 }
 
-{% endhighlight %}
+```
 
 Obviously, perldoc give detailed explaination.
 

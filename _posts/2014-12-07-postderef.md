@@ -12,9 +12,10 @@ categories: tech
 Perl 5.20 可以使用后缀解引用，因为是新的feature，并不是默认启用的。
 所以，需要用
 
+```{perl}
     use v5.20;
     use experimental 'postderef';
-
+```
 来启用。
 
 有人会问，这个并没有默认启用，会不会不稳定？ 答案是否定的。请参考 Ricardo Signes 的YAPC 视频（链接2）。
@@ -22,7 +23,8 @@ Perl 5.20 可以使用后缀解引用，因为是新的feature，并不是默认
 ##  语法
 
 ### 数组解引用
-    
+
+```{perl}    
     my $items = ['a'..'z']; # 'a', 'b', 'c' .. 'z'
     
     say "get a whole array";
@@ -48,7 +50,7 @@ Perl 5.20 可以使用后缀解引用，因为是新的feature，并不是默认
     my %hash_postdef = $items->%[2,3]; # same here
     p %hash_norm; # { 2 => 'c' , 3 => 'd' }
     p %hash_postdef; # { 2 => 'c' , 3 => 'd' }
-    
+```    
     
 你可以试试复制本文中的代码部分，运行一下。什么？ 你没有安装Data::Printer?
 

@@ -13,7 +13,7 @@ categories: tech
 
 我一个同事 david 写了段代码：
 
-{% highlight perl %}
+```{perl}
 
 my $alan = fork();
 if ( not $alan ) {
@@ -31,7 +31,7 @@ else {
     wait $hao;
 }
 
-{% endhighlight %}
+```
 
 david 这个人很有个性，工作上我们经常争论。不过，一点都不影响下班后的交往。
 

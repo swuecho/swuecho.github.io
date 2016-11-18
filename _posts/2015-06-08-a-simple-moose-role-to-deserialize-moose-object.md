@@ -6,7 +6,7 @@ categories: tech
 ---
 ### the moose role
 
-{% highlight bash %}
+```{bash}
 package TOJSON;
 use Moose::Role;
 
@@ -21,11 +21,11 @@ sub TO_JSON {
 
 1;
 
-{% endhighlight %}
+```
 
 ### use the role
 
-{% highlight bash %}
+```{bash}
 
 package Point {
 
@@ -44,5 +44,5 @@ use DDP;
 my $p = Point->new( { new => 1, x => 1, y => 2 } );
 p $p->TO_JSON;
 
-{% endhighlight %}
+```
 

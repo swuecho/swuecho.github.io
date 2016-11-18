@@ -4,7 +4,7 @@ title:  String operation in R
 date:   2016-05-07 19:21 
 categories: tech 
 ---
-ng operation in R</h1>
+<h1>String operation in R</h1>
 
 <p>example draw from &ldquo;The art of R programming&rdquo;</p>
 

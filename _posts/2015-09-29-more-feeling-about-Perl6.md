@@ -33,7 +33,7 @@ The [quiz](http://www.metracom.com/august_challenge.html):
 
 my code;
 
-{% highlight perl %}
+```{perl}
 
 # run on This is perl6 version 2015.09-163-gcd8ce4e built on MoarVM version 2015.09-39-g1434283
 
@@ -119,5 +119,5 @@ for ^5 -> $g {
    say '------------------------------';
 }
 
-{% endhighlight %}
+```
 

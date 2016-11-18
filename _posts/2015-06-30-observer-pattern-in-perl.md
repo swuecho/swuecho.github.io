@@ -11,7 +11,7 @@ https://en.wikipedia.org/wiki/Observer_pattern
 
 ## implement the example in Perl
 
-{% highlight bash %}
+```{bash}
 
 use Std;    #for signature and postfix deref
 
@@ -68,13 +68,13 @@ my $observer2 = Observer2->new->register($subject);
 
 $subject->notify_observers('test');
 
-{% endhighlight %}
+```
 
 
 
 ## emulate the EventEmiter in Node js
 
-{% highlight bash %}
+```{bash}
 
 use Std;
 
@@ -108,5 +108,5 @@ $emitter->on( 'greet', sub ($name) { say( 'Hello, ' . $name . '!' ); } );
 $emitter->on( 'greet', sub ($name) { say( 'World, ' . $name . '!' ); } );
 
 $emitter->emit( 'greet', $_ ) for qw( foo bar baz);
-{% endhighlight %}
+```
 

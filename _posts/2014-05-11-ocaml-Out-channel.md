@@ -7,7 +7,7 @@ categories: tech
 
  have to have some line in the doc, not code only
 
-{% highlight ocaml %}
+```{ocaml}
 
 
 utop # module M = Out_channel;;
@@ -36,4 +36,4 @@ module M :
     val write_lines : string -> string list -> unit
     val write_all : string -> data:string -> unit
   end
-{% endhighlight %}
+```

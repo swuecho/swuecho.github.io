@@ -11,25 +11,25 @@ the most important thing I miss is the driver depend on linux kernel, so that me
 
 ### check the kernel version (Ubuntu 14.04)
 
-{% highlight bash %}
+```{bash}
 
 uname -a
 
 Linux IS 3.16.0-34-generic #47~14.04.1-Ubuntu SMP Fri Apr 10 17:49:16 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
 
-{% endhighlight %}
+```
 
 ### then install driver 
 
-{% highlight bash %}
+```{bash}
 
 sudo apt-get install bcmwl-kernel-source
 
-{% endhighlight %}
+```
 
 ## show all the pci information
 
-{% highlight bash %}
+```{bash}
 lspci -nnk
 
 00:00.0 Host bridge [0600]: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor DRAM Controller [8086:0c04] (rev 06)
@@ -93,4 +93,4 @@ lspci -nnk
 	Subsystem: Dell Device [1028:05cc]
 	Kernel driver in use: sdhci-pci
 
-{% endhighlight %}
+```

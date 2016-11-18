@@ -9,9 +9,9 @@ I set my bash to show fortune when I login. Obviously, fortune should be install
 
 It is weried that fortune is named as fortune-mod
 
-{% highlight bash %}
+```{bash}
 
     sudo yum install fortune-mod
 
-{% endhighlight %}
+```
 

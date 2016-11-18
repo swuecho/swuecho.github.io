@@ -7,7 +7,7 @@ categories: tech
 
 Common psql command line 
 
-{% highlight sql %}
+```{sql}
 
 # List of databases 
 \l  
@@ -68,4 +68,4 @@ TODO: ;
 # watch the query every sencond 
 select * from dataset; \watch 1; 
 
-{% endhighlight %}
+```
