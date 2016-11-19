@@ -37,6 +37,19 @@ tarantool> box.space.tester:select()
 tarantool> 
 ```
 
+edit: config with port, so can connect
+
+```
+tarantool> box.cfg{listen = 3302}
+---
+...
+
+tarantool> box.cfg.listen
+---
+- '3302'
+...
+```
+
 ## list spaces
 
 
