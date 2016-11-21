@@ -125,7 +125,10 @@ ocamlfind ocamlc -linkpkg -package sqlite3 test_exec.ml -o test.byte
 ./test.byte
 ```
 
-Why? what is ocamlfind? Ok, We need a ocamlfind tutorial
+Why? what is ocamlfind? Ok, We need a ocamlfind tutorial.
+
+Fortunately, there is a basic one about how to compile ocaml program.
+https://ocaml.org/learn/tutorials/compiling_ocaml_projects.html
 
 
 ## Conclusion
