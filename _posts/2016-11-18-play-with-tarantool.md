@@ -94,7 +94,7 @@ function list_spaces_count()
       tuple_count = '0'
     end
     line = space_name .. ' tuple_count =' .. tuple_count
-    if tuple_count == '1 or more' then
+    if tuple_count > 1 then
       for k1, v1 in box.space[space_name]:pairs() do
         line = line .. '. first field in first tuple = ' .. v1[1]
         break
