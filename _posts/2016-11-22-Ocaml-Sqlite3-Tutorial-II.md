@@ -104,9 +104,7 @@ let insert_data db =
 (* Program main. *)
 
 let () =
-  (* The database is called test.db. Delete it if it already exists. *)
   let db_filename = "test.db" in
-  (* Create a new database. *)
   let db = Sqlite3.db_open db_filename in
 
   insert_data db ;
@@ -171,10 +169,8 @@ let search_iterator db =
 (* Program main. *)
 
 let () =
-  (* The database is called test.db. Delete it if it already exists. *)
   let db_filename = "test.db" in
 
-  (* Create a new database. *)
   let db = Sqlite3.db_open db_filename in
 
   search_iterator db ;
