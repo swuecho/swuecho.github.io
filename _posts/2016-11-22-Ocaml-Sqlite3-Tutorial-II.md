@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Ocaml Sqlite3 Tutorial I 
+title:  Ocaml Sqlite3 Tutorial II
 date:   2016-11-21 14:03 
 categories: tech 
 ---
