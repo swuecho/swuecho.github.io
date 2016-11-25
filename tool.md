@@ -6,24 +6,9 @@ permalink: /tool/
 
 ### Arabic Number to Written Number translator
 
-<style>
-html, body, #app {
-    margin: 5%;
-    height: 100%;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #333;
-}
-
-#app {
-        border-style: solid;
-        border-width: 5px;
-}
-
-</style>
 <script src="/assets/js/vue.js"></script>
 <script src="/assets/number_transform.js"></script>
 <title>Widgets</title>
-</head>
 <body>
 <div id="app">
 </p> please input a number, such as 1234</p>
