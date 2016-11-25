@@ -5,8 +5,9 @@ new Vue({
   },
   methods: {
     transform: function () {
-      number = this.message;
-      let (whole,part) = number.split('.') 
+      var number = this.message;
+      var whole = number.split('.')[0]
+      var part = number.split('.')[1]
       if (part) {
         return writtenNumber(whole) + ' and ' + writtenNumber(part);
       } else {
