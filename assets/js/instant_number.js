@@ -1,7 +1,7 @@
 new Vue({
   el: '#app',
   data: {
-    message: '123'
+    message: '123.5'
   },
   methods: {
     transform: function () {
