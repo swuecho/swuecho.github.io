@@ -5,7 +5,13 @@ new Vue({
   },
   methods: {
     transform: function () {
-      return writtenNumber(this.message)
+      number = this.message;
+      let (whole,part) = number.split('.') 
+      if (part) {
+        return writtenNumber(whole) + ' and ' + writtenNumber(part);
+      } else {
+        return writtenNumber(whole);
+      }
     }
   }
 })
