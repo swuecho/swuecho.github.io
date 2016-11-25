@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  basc bash 
+title:  basic bash 
 date:   2016-11-24 19:51 
 categories: tech 
 ---
