@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tool
+title: Small Tools
 permalink: /tool/
 ---
 
