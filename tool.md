@@ -6,18 +6,43 @@ permalink: /tool/
 
 ### Arabic Number to Written Number translator
 
- <fieldset>
-  <legend>Translator </legend>
-  Number: <input id='number' type="number"><br>
-  <button onclick="util_translate()"> translate </button>
- </fieldset>
- <p id="result"></p>
-
-<script>
-function util_translate() {
-	var number = document.getElementById('number').value;
-	document.getElementById("result").innerHTML = number + ' : <br/> '+ writtenNumber(number);
+<style>
+html, body, #app {
+    margin: 5%;
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
 }
+
+#app {
+        border-style: solid;
+        border-width: 5px;
+}
+
+</style>
+<script src="/assets/js/vue.js"></script>
+<script src="/assets/number_transform.js"></script>
+<title>Widgets</title>
+</head>
+<body>
+<div id="app">
+</p> please input a number, such as 1234</p>
+<input v-model="message">
+<p>{{ message }}</p>
+<p>{{ transform(message) }}</p>
+</div>
+<p>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message: '123'
+  },
+  methods: {
+    transform: function () {
+      return writtenNumber(this.message)
+    }
+  }
+})
 </script>
 
-<script src="/assets/js/util.js"></script>

@@ -16,7 +16,7 @@ html, body, #app {
 
 </style>
 <script src="/assets/js/vue.js"></script>
-<script src="./number_transform.js"></script>
+<script src="/assets/number_transform.js"></script>
 <title>Widgets</title>
 </head>
 <body>
@@ -27,6 +27,19 @@ html, body, #app {
 <p>{{ transform(message) }}</p>
 </div>
 <p>
-<script src="./instant.js"></script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message: '123'
+  },
+  methods: {
+    transform: function () {
+      return writtenNumber(this.message)
+    }
+  }
+})
+</script>
+
 </body>
 </html>
