@@ -17,17 +17,5 @@ permalink: /tool/
 <p>{{ transform(message) }}</p>
 </div>
 <p>
-<script>
-new Vue({
-  el: '#app',
-  data: {
-    message: '123'
-  },
-  methods: {
-    transform: function () {
-      return writtenNumber(this.message)
-    }
-  }
-})
-</script>
+<script src="/assets/js/instant_number.js"></script>
 
