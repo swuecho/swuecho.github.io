@@ -1,5 +1,5 @@
 /*!
- * Vue.js v1.0.26
+ * Vue.js v1.0.22
  * (c) 2016 Evan You
  * Released under the MIT License.
  */
@@ -402,15 +402,10 @@
 
   // UA sniffing for working around browser-specific quirks
   var UA = inBrowser && window.navigator.userAgent.toLowerCase();
-  var isIE = UA && UA.indexOf('trident') > 0;
   var isIE9 = UA && UA.indexOf('msie 9.0') > 0;
   var isAndroid = UA && UA.indexOf('android') > 0;
   var isIos = UA && /(iphone|ipad|ipod|ios)/i.test(UA);
-  var iosVersionMatch = isIos && UA.match(/os ([\d_]+)/);
-  var iosVersion = iosVersionMatch && iosVersionMatch[1].split('_');
-
-  // detecting iOS UIWebView by indexedDB
-  var hasMutationObserverBug = iosVersion && Number(iosVersion[0]) >= 9 && Number(iosVersion[1]) >= 3 && !window.indexedDB;
+  var isWechat = UA && UA.indexOf('micromessenger') > 0;
 
   var transitionProp = undefined;
   var transitionEndEvent = undefined;
@@ -451,7 +446,7 @@
     }
 
     /* istanbul ignore if */
-    if (typeof MutationObserver !== 'undefined' && !hasMutationObserverBug) {
+    if (typeof MutationObserver !== 'undefined' && !(isWechat && isIos)) {
       var counter = 1;
       var observer = new MutationObserver(nextTickHandler);
       var textNode = document.createTextNode(counter);
@@ -523,12 +518,12 @@
 
   p.put = function (key, value) {
     var removed;
+    if (this.size === this.limit) {
+      removed = this.shift();
+    }
 
     var entry = this.get(key, true);
     if (!entry) {
-      if (this.size === this.limit) {
-        removed = this.shift();
-      }
       entry = {
         key: key
       };
@@ -773,7 +768,7 @@ var directive = Object.freeze({
     var unsafeOpen = escapeRegex(config.unsafeDelimiters[0]);
     var unsafeClose = escapeRegex(config.unsafeDelimiters[1]);
     tagRE = new RegExp(unsafeOpen + '((?:.|\\n)+?)' + unsafeClose + '|' + open + '((?:.|\\n)+?)' + close, 'g');
-    htmlRE = new RegExp('^' + unsafeOpen + '((?:.|\\n)+?)' + unsafeClose + '$');
+    htmlRE = new RegExp('^' + unsafeOpen + '.*' + unsafeClose + '$');
     // reset cache
     cache = new Cache(1000);
   }
@@ -1145,9 +1140,8 @@ var transition = Object.freeze({
    */
 
   function inDoc(node) {
-    if (!node) return false;
-    var doc = node.ownerDocument.documentElement;
-    var parent = node.parentNode;
+    var doc = document.documentElement;
+    var parent = node && node.parentNode;
     return doc === node || doc === parent || !!(parent && parent.nodeType === 1 && doc.contains(parent));
   }
 
@@ -1560,8 +1554,7 @@ var transition = Object.freeze({
         return (/HTMLUnknownElement/.test(el.toString()) &&
           // Chrome returns unknown for several HTML5 elements.
           // https://code.google.com/p/chromium/issues/detail?id=540526
-          // Firefox returns unknown for some "Interactive elements."
-          !/^(data|time|rtc|rb|details|dialog|summary)$/.test(tag)
+          !/^(data|time|rtc|rb)$/.test(tag)
         );
       }
     };
@@ -1897,9 +1890,7 @@ var transition = Object.freeze({
     }
     if (child.mixins) {
       for (var i = 0, l = child.mixins.length; i < l; i++) {
-        var mixin = child.mixins[i];
-        var mixinOptions = mixin.prototype instanceof Vue ? mixin.options : mixin;
-        parent = mergeOptions(parent, mixinOptions, vm);
+        parent = mergeOptions(parent, child.mixins[i], vm);
       }
     }
     for (key in parent) {
@@ -2327,13 +2318,10 @@ var transition = Object.freeze({
   	hasProto: hasProto,
   	inBrowser: inBrowser,
   	devtools: devtools,
-  	isIE: isIE,
   	isIE9: isIE9,
   	isAndroid: isAndroid,
   	isIos: isIos,
-  	iosVersionMatch: iosVersionMatch,
-  	iosVersion: iosVersion,
-  	hasMutationObserverBug: hasMutationObserverBug,
+  	isWechat: isWechat,
   	get transitionProp () { return transitionProp; },
   	get transitionEndEvent () { return transitionEndEvent; },
   	get animationProp () { return animationProp; },
@@ -2821,9 +2809,7 @@ var path = Object.freeze({
   var restoreRE = /"(\d+)"/g;
   var pathTestRE = /^[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*|\['.*?'\]|\[".*?"\]|\[\d+\]|\[[A-Za-z_$][\w$]*\])*$/;
   var identRE = /[^\w$\.](?:[A-Za-z_$][\w$]*)/g;
-  var literalValueRE$1 = /^(?:true|false|null|undefined|Infinity|NaN)$/;
-
-  function noop() {}
+  var booleanLiteralRE = /^(?:true|false)$/;
 
   /**
    * Save / Rewrite / Restore
@@ -2905,7 +2891,7 @@ var path = Object.freeze({
     // save strings and object literal keys
     var body = exp.replace(saveRE, save).replace(wsRE, '');
     // rewrite all paths
-    // pad 1 space here because the regex matches 1 extra char
+    // pad 1 space here becaue the regex matches 1 extra char
     body = (' ' + body).replace(identRE, rewrite).replace(restoreRE, restore);
     return makeGetterFn(body);
   }
@@ -2926,15 +2912,7 @@ var path = Object.freeze({
       return new Function('scope', 'return ' + body + ';');
       /* eslint-enable no-new-func */
     } catch (e) {
-      if ('development' !== 'production') {
-        /* istanbul ignore if */
-        if (e.toString().match(/unsafe-eval|CSP/)) {
-          warn('It seems you are using the default build of Vue.js in an environment ' + 'with Content Security Policy that prohibits unsafe-eval. ' + 'Use the CSP-compliant build instead: ' + 'http://vuejs.org/guide/installation.html#CSP-compliant-build');
-        } else {
-          warn('Invalid expression. ' + 'Generated function body: ' + body);
-        }
-      }
-      return noop;
+      'development' !== 'production' && warn('Invalid expression. ' + 'Generated function body: ' + body);
     }
   }
 
@@ -2996,8 +2974,8 @@ var path = Object.freeze({
 
   function isSimplePath(exp) {
     return pathTestRE.test(exp) &&
-    // don't treat literal values as paths
-    !literalValueRE$1.test(exp) &&
+    // don't treat true/false as paths
+    !booleanLiteralRE.test(exp) &&
     // Math constants e.g. Math.PI, Math.E etc.
     exp.slice(0, 5) !== 'Math.';
   }
@@ -3037,26 +3015,19 @@ var expression = Object.freeze({
    */
 
   function flushBatcherQueue() {
-    var _again = true;
-
-    _function: while (_again) {
-      _again = false;
-
+    runBatcherQueue(queue);
+    queue.length = 0;
+    runBatcherQueue(userQueue);
+    // user watchers triggered more internal watchers
+    if (queue.length) {
       runBatcherQueue(queue);
-      runBatcherQueue(userQueue);
-      // user watchers triggered more watchers,
-      // keep flushing until it depletes
-      if (queue.length) {
-        _again = true;
-        continue _function;
-      }
-      // dev tool hook
-      /* istanbul ignore if */
-      if (devtools && config.devtools) {
-        devtools.emit('flush');
-      }
-      resetBatcherState();
     }
+    // dev tool hook
+    /* istanbul ignore if */
+    if (devtools && config.devtools) {
+      devtools.emit('flush');
+    }
+    resetBatcherState();
   }
 
   /**
@@ -3082,7 +3053,6 @@ var expression = Object.freeze({
         }
       }
     }
-    queue.length = 0;
   }
 
   /**
@@ -3413,7 +3383,7 @@ var expression = Object.freeze({
     }
     var isA = isArray(val);
     var isO = isObject(val);
-    if ((isA || isO) && Object.isExtensible(val)) {
+    if (isA || isO) {
       if (val.__ob__) {
         var depId = val.__ob__.dep.id;
         if (seen.has(depId)) {
@@ -3476,7 +3446,6 @@ var expression = Object.freeze({
 
   var tagRE$1 = /<([\w:-]+)/;
   var entityRE = /&#?\w+?;/;
-  var commentRE = /<!--/;
 
   /**
    * Convert a string template to a DocumentFragment.
@@ -3499,9 +3468,8 @@ var expression = Object.freeze({
     var frag = document.createDocumentFragment();
     var tagMatch = templateString.match(tagRE$1);
     var entityMatch = entityRE.test(templateString);
-    var commentMatch = commentRE.test(templateString);
 
-    if (!tagMatch && !entityMatch && !commentMatch) {
+    if (!tagMatch && !entityMatch) {
       // text only, return a single text node.
       frag.appendChild(document.createTextNode(templateString));
     } else {
@@ -4468,7 +4436,7 @@ var template = Object.freeze({
      * the filters. This is passed to and called by the watcher.
      *
      * It is necessary for this to be called during the
-     * watcher's dependency collection phase because we want
+     * wathcer's dependency collection phase because we want
      * the v-for to update when the source Object is mutated.
      */
 
@@ -4811,10 +4779,7 @@ var template = Object.freeze({
     },
 
     update: function update(value) {
-      // #3029 only update when the value changes. This prevent
-      // browsers from overwriting values like selectionStart
-      value = _toString(value);
-      if (value !== this.el.value) this.el.value = value;
+      this.el.value = _toString(value);
     },
 
     unbind: function unbind() {
@@ -4863,8 +4828,6 @@ var template = Object.freeze({
   var select = {
 
     bind: function bind() {
-      var _this = this;
-
       var self = this;
       var el = this.el;
 
@@ -4896,12 +4859,7 @@ var template = Object.freeze({
       // selectedIndex with value -1 to 0 when the element
       // is appended to a new parent, therefore we have to
       // force a DOM update whenever that happens...
-      this.vm.$on('hook:attached', function () {
-        nextTick(_this.forceUpdate);
-      });
-      if (!inDoc(el)) {
-        nextTick(this.forceUpdate);
-      }
+      this.vm.$on('hook:attached', this.forceUpdate);
     },
 
     update: function update(value) {
@@ -6171,7 +6129,7 @@ var template = Object.freeze({
     if (value === undefined) {
       value = getPropDefaultValue(vm, prop);
     }
-    value = coerceProp(prop, value, vm);
+    value = coerceProp(prop, value);
     var coerced = value !== rawValue;
     if (!assertProp(prop, value, vm)) {
       value = undefined;
@@ -6290,17 +6248,13 @@ var template = Object.freeze({
    * @return {*}
    */
 
-  function coerceProp(prop, value, vm) {
+  function coerceProp(prop, value) {
     var coerce = prop.options.coerce;
     if (!coerce) {
       return value;
     }
-    if (typeof coerce === 'function') {
-      return coerce(value);
-    } else {
-      'development' !== 'production' && warn('Invalid coerce for prop "' + prop.name + '": expected function, got ' + typeof coerce + '.', vm);
-      return value;
-    }
+    // coerce is a function
+    return coerce(value);
   }
 
   /**
@@ -6832,9 +6786,10 @@ var template = Object.freeze({
       // resolve on owner vm
       var hooks = resolveAsset(this.vm.$options, 'transitions', id);
       id = id || 'v';
-      oldId = oldId || 'v';
       el.__v_trans = new Transition(el, id, hooks, this.vm);
-      removeClass(el, oldId + '-transition');
+      if (oldId) {
+        removeClass(el, oldId + '-transition');
+      }
       addClass(el, id + '-transition');
     }
   };
@@ -7252,7 +7207,7 @@ var template = Object.freeze({
             if (token.html) {
               replace(node, parseTemplate(value, true));
             } else {
-              node.data = _toString(value);
+              node.data = value;
             }
           } else {
             vm._bindDir(token.descriptor, node, host, scope);
@@ -7810,7 +7765,7 @@ var template = Object.freeze({
       var node = nodes[i];
       if (isTemplate(node) && !node.hasAttribute('v-if') && !node.hasAttribute('v-for')) {
         parent.removeChild(node);
-        node = parseTemplate(node, true);
+        node = parseTemplate(node);
       }
       frag.appendChild(node);
     }
@@ -8236,7 +8191,7 @@ var template = Object.freeze({
     };
   }
 
-  function noop$1() {}
+  function noop() {}
 
   /**
    * A directive links a DOM element with a piece of data,
@@ -8335,7 +8290,7 @@ var template = Object.freeze({
           }
         };
       } else {
-        this._update = noop$1;
+        this._update = noop;
       }
       var preProcess = this._preProcess ? bind(this._preProcess, this) : null;
       var postProcess = this._postProcess ? bind(this._postProcess, this) : null;
@@ -9773,7 +9728,7 @@ var template = Object.freeze({
 
     json: {
       read: function read(value, indent) {
-        return typeof value === 'string' ? value : JSON.stringify(value, null, arguments.length > 1 ? indent : 2);
+        return typeof value === 'string' ? value : JSON.stringify(value, null, Number(indent) || 2);
       },
       write: function write(value) {
         try {
@@ -9846,13 +9801,7 @@ var template = Object.freeze({
 
     pluralize: function pluralize(value) {
       var args = toArray(arguments, 1);
-      var length = args.length;
-      if (length > 1) {
-        var index = value % 10 - 1;
-        return index in args ? args[index] : args[length - 1];
-      } else {
-        return args[0] + (value === 1 ? '' : 's');
-      }
+      return args.length > 1 ? args[value % 10 - 1] || args[args.length - 1] : args[0] + (value === 1 ? '' : 's');
     },
 
     /**
@@ -10037,9 +9986,7 @@ var template = Object.freeze({
             }
           }
           if (type === 'component' && isPlainObject(definition)) {
-            if (!definition.name) {
-              definition.name = id;
-            }
+            definition.name = id;
             definition = Vue.extend(definition);
           }
           this.options[type + 's'][id] = definition;
@@ -10054,7 +10001,7 @@ var template = Object.freeze({
 
   installGlobalAPI(Vue);
 
-  Vue.version = '1.0.26';
+  Vue.version = '1.0.22';
 
   // devtools global hook
   /* istanbul ignore next */
