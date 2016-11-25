@@ -7,7 +7,7 @@ permalink: /tool/
 ### Arabic Number to Written Number translator
 
 <script src="/assets/js/vue.js"></script>
-<script src="/assets/number_transform.js"></script>
+<script src="/assets/js/number_transform.js"></script>
 <title>Widgets</title>
 <body>
 <div id="app">
