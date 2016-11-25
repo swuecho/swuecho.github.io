@@ -11,7 +11,7 @@ permalink: /tool/
 <title>Widgets</title>
 <body>
 <div id="app">
-</p> please input a number, such as 1234</p>
+<p> please input a number, such as 1234</p>
 <input v-model="message">
 <p>{{ message }}</p>
 <p>{{ transform(message) }}</p>
