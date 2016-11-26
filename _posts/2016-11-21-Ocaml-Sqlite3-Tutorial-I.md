@@ -103,12 +103,14 @@ Basicly, You need to let ocaml find the where the library you used
 ```
 
 because we use sqlite3, so we need to modify it a bit 
+
 ```{ocaml}
 #!/usr/bin/env ocaml
 (* Need topfind to make require work, need require to use sqlite3 package *)
 #use "topfind"
 #require "sqlite3"
 ```
+
 and add the above code to test_exec.ml
 
 lastly, 
