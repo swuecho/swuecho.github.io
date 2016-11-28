@@ -7,7 +7,7 @@ categories: tech
 
 Send Email using elisp script  
 
-```{elisp}
+```elisp
 
 #!/usr/bin/emacs --script
 

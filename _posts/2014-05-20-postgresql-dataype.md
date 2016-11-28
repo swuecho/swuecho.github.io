@@ -51,7 +51,7 @@ postgresql datatype
 
 if put this in the table header, it will be escpased by jekyll. very strange 
 
-```{html}
+```html
 <tr>
 <td align="center" colspan=1>category</td>
 <td align="center" colspan=1>type</td>

@@ -27,7 +27,7 @@ such as:
 
 https://raw.githubusercontent.com/mmottl/sqlite3-ocaml/master/test/test_exec.ml
 
-```{ocaml}
+```ocaml
 open Printf
 open Sqlite3
 
@@ -94,7 +94,7 @@ check https://ocaml.org/learn/tutorials/get_up_and_running.html
 
 Basicly, You need to let ocaml find the where the library you used
 
-```{ocaml}
+```ocaml
 #!/usr/bin/env ocaml
 (* Need topfind to make require work, need require to use podge package *)
 #use "topfind"
@@ -104,7 +104,7 @@ Basicly, You need to let ocaml find the where the library you used
 
 because we use sqlite3, so we need to modify it a bit 
 
-```{ocaml}
+```ocaml
 #!/usr/bin/env ocaml
 (* Need topfind to make require work, need require to use sqlite3 package *)
 #use "topfind"

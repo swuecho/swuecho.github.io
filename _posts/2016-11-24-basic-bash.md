@@ -9,7 +9,7 @@ categories: tech
 
 ## for loop
 
-```{bash}
+```bash
 # output 1 to 50
 for i in $(seq 1 50)
 do 
@@ -18,7 +18,7 @@ done
 ```
 ## while 
 
-```{bash}
+```bash
 while condition
 do
     statements
@@ -27,7 +27,7 @@ done
 
 ## if 
 
-```{bash}
+```bash
 if condition
 then
     statements

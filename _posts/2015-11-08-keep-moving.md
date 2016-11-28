@@ -15,7 +15,7 @@ something can be changed in the process
 
 may bring new opportunities
 
-```{bash}
+```bash
 
 ```
 

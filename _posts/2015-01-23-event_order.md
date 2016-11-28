@@ -7,7 +7,7 @@ categories: tech
 
 Below is the script to get the event order of Ext.Component
 
-```{javascript}
+```javascript
 
 var comp = Ext.create('Ext.Component', {
     html: 'Component',

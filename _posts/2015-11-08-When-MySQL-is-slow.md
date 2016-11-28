@@ -7,7 +7,7 @@ categories: tech
 
 # alter table
 
-```{bash}
+```bash
 mysql alter table is to slow
 mysql> ALTER TABLE OPERA_ORATORIO ADD nseq_length smallint
     -> ;

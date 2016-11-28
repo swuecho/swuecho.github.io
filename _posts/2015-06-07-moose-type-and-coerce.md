@@ -23,7 +23,7 @@ Typically, a subtype takes the parent's constraint and makes it more specific.
 
 A coercion lets you tell Moose to automatically convert one type to another.
 
-```{perl}
+```perl
     
 use Moose::Util::TypeConstraints;
 

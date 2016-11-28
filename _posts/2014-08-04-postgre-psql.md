@@ -7,7 +7,7 @@ categories: tech
 
 Common psql command line 
 
-```{sql}
+```sql
 
 # List of databases 
 \l  

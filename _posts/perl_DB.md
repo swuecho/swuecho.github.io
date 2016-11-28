@@ -5,13 +5,13 @@ Perl DB notes
 
 if you want to execute an SQL statement once and do not care about the return value
 
-```{perl}
+```perl
 $dbh->do($sql);
 ```
 
 if you want to execute an SQL statement many times,
 
-```{perl}
+```perl
 my $sth = $dbh->prepare($insert_sql);
 
 foreach my $value (@value) {
@@ -27,7 +27,7 @@ there are many ways to fetch the results, depending on your needs.
 
 Methods are available that allow you to skip the iterator and return all your data at one time. These methods are generally called agaist the database handle and prepare, execute and fetch your data all in one go.
 
-```{perl}
+```perl
 my $result = $dbh->selectall_arrayref($sql);
 ```
 selectall_* methods are good for select small amounts of data. If your SQL statement return a huge amount of data, try to avoid it.

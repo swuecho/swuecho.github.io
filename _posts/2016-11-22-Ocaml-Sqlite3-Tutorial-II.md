@@ -9,7 +9,7 @@ The code blow are modifed from http://www.mega-nerd.com/erikd/Blog/CodeHacking/O
 I split the orginal problem into parts and fix the bugs in search_iterator
 
 ## Create Table
-```{ocaml}
+```ocaml
 #!/usr/bin/env ocaml
 #use "topfind"
 #require "sqlite3"
@@ -57,7 +57,7 @@ let () =
 ```
 
 ## Insert Data
-```{ocaml}
+```ocaml
 #!/usr/bin/env ocaml
 (* Need topfind to make require work, need require to use podge package *)
 #use "topfind"
@@ -118,7 +118,7 @@ let () =
 ## Query Data
              
 
-```{ocaml}
+```ocaml
 #!/usr/bin/env ocaml
 (* Need topfind to make require work, need require to use podge package *)
 #use "topfind"
@@ -183,7 +183,7 @@ let () =
 in the problem above, 
 Sqlite3.column_decltype return option string, so I have to add pattern match to make it work.
 
-```{ocaml}
+```ocaml
 
         let type_name = 
               match Sqlite3.column_decltype s col with

@@ -7,7 +7,7 @@ categories: tech
 
  have to have some line in the doc, not code only
 
-```{ocaml}
+```ocaml
 
 
 utop # module M = In_channel;;

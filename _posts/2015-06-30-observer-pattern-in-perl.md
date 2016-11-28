@@ -11,7 +11,7 @@ https://en.wikipedia.org/wiki/Observer_pattern
 
 ## implement the example in Perl
 
-```{bash}
+```bash
 
 use Std;    #for signature and postfix deref
 
@@ -74,7 +74,7 @@ $subject->notify_observers('test');
 
 ## emulate the EventEmiter in Node js
 
-```{bash}
+```bash
 
 use Std;
 

@@ -12,7 +12,7 @@ categories: tech
 Perl 5.20 可以使用后缀解引用，因为是新的feature，并不是默认启用的。
 所以，需要用
 
-```{perl}
+```perl
     use v5.20;
     use experimental 'postderef';
 ```
@@ -24,7 +24,7 @@ Perl 5.20 可以使用后缀解引用，因为是新的feature，并不是默认
 
 ### 数组解引用
 
-```{perl}    
+```perl    
     my $items = ['a'..'z']; # 'a', 'b', 'c' .. 'z'
     
     say "get a whole array";

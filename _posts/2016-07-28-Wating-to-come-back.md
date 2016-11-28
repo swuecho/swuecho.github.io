@@ -13,7 +13,7 @@ categories: tech
 
 我一个同事 david 写了段代码：
 
-```{perl}
+```perl
 
 my $alan = fork();
 if ( not $alan ) {

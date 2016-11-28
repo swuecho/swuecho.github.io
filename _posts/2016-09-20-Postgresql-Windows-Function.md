@@ -7,7 +7,7 @@ categories: tech
 
 NOTE: the data in this blog come from  http://postgresguide.com/tips/window.html
 
-```{SQL}
+```SQL
 hwu=# select * from demo_sales ;
  last_name | salary | department | rank
 -----------+--------+------------+------
@@ -21,7 +21,7 @@ hwu=# select * from demo_sales ;
 
 
 ## group by 
-```{SQL}
+```SQL
 hwu=# select department, sum(salary) from demo_sales group by department;
  department |  sum
 ------------+--------
@@ -34,7 +34,7 @@ hwu=# select department, sum(salary) from demo_sales group by department;
 
 ## aggregate window function
 
-```{SQL}
+```SQL
 hwu=# select last_name,department, sum(salary) OVER (PARTITION BY department) from demo_sales;
  last_name | department |  sum
 -----------+------------+--------
@@ -56,7 +56,7 @@ compare the query above and try to understand this from postgresql manual "A win
 seems if 'order by' is addded. the aggreage funciton is called on the rows in the partition to current row, instead all of them
 
 
-```{SQL}
+```SQL
 hwu=# select last_name,department, sum(salary) OVER (PARTITION BY department order by salary) from demo_sales;
  last_name | department |  sum
 -----------+------------+--------
@@ -72,7 +72,7 @@ hwu=# select last_name,department, sum(salary) OVER (PARTITION BY department ord
 
 PS: the code to insert the data to postgresql without write query.
 
-```{python}
+```python
 # turn a csv to a table in postgresql database
 import pandas
 from sqlalchemy import create_engine

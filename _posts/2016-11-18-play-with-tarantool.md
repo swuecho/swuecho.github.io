@@ -81,7 +81,7 @@ end
 
 ## list spaces with count
 
-```{lua}
+```lua
 function list_spaces_count()
   local tuple_count, space_name, line
   local ta = {}

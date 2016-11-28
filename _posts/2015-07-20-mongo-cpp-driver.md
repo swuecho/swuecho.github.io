@@ -7,7 +7,7 @@ categories: tech
 There is some document there, but takes time for me to find it.
 besides, the build command change compared with the 26compat branch
 
-```{bash}
+```bash
 
 # install some requirement
 

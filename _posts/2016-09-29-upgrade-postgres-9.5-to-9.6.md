@@ -5,7 +5,7 @@ date:   2016-09-29 11:14
 categories: tech 
 ---
 
-```{bash}
+```bash
 sudo service postgresql stop
 sudo apt-get install postgresql-9.6
 sudo service postgresql staus
@@ -14,7 +14,7 @@ sudo service postgresql start
 
 ## dump all the data
 
-```{bash}
+```bash
 pg_dumpall >9.5.db
 ```
 
