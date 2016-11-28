@@ -10,7 +10,7 @@ categories: tech
 
 go to the data directory, start tarantoll and run box.cfg(), and that is it.
 
-```
+```bash
 ➜  tarantool_sandbox tarantool
 tarantool: version 1.7.2-235-gd058363
 type 'help' for interactive help
@@ -39,7 +39,7 @@ tarantool>
 
 edit: config with port, so can connect
 
-```
+```bash
 tarantool> box.cfg{listen = 3302}
 ---
 ...
