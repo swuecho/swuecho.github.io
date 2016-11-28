@@ -53,7 +53,7 @@ tarantool> box.cfg.listen
 ## list spaces
 
 
-```{lua}
+```lua
 function list_spaces()
   local tuple_count, space_name, line
   local ta = {}
