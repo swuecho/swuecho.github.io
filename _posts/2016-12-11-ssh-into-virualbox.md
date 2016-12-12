@@ -8,7 +8,7 @@ have tried a lot of ways to ssh into the virtualbox.
 
 finally, get the easiest method.
 
-<img src="/assets/img/ssh_virtualbox_port_forwarding.png" alt="Port Forwading" style="width: 200px;"/>
+<img src="/assets/img/ssh_virtualbox_port_forwarding.png" alt="Port Forwading" style="width: 800px;"/>
 
 
 Be careful:
