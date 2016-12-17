@@ -6,9 +6,10 @@ categories: tech
 ---
 have tried a lot of ways to ssh into the virtualbox.
 
-finally, get the easiest method.
+finally, get the easiest method[1]
 
-![port forwarding](/assets/img/ssh_virtualbox_port_forwarding.png)
+<img src="/assets/img/ssh_virtualbox_port_forwarding.png" alt="Port Forwading" style="width: 800px;"/>
+
 
 Be careful:
 
@@ -18,4 +19,6 @@ Be careful:
 
 
 
+ref:
+1. https://unix.stackexchange.com/questions/145997/trying-to-ssh-to-local-vm-ubuntu-with-putty/146028#146028
 
