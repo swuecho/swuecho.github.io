@@ -58,5 +58,6 @@ the following does not work
 g++ -std=c++11   -lboost_system -lboost_filesystem  file_size.cpp -o file_size
 ```
 
+the reason? the order of -l matters.
 
-
+http://stackoverflow.com/questions/11893996/why-does-the-order-of-l-option-in-gcc-matter
