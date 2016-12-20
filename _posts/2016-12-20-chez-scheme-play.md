@@ -9,7 +9,7 @@ categories: tech
 
 copy the sample script from user manual
 
-```{sheme}
+```scheme
 #! /usr/bin/scheme-script 
 (import (rnrs))
 (let ([args (cdr (command-line))])
