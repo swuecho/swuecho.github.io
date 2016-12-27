@@ -24,8 +24,8 @@ To use Lucy, there are two basic steps.
 1. Create index
 2. Search 
 
-```perl
 
+```perl
 use v5.10;
 
 # (Change configuration variables as needed.)
@@ -179,6 +179,9 @@ while ( my $hit = $hits->next ) {
 }
 ```
 
+the scripts can be downloaded at
 
+https://raw.githubusercontent.com/swuecho/swuecho.github.io/master/scripts/indexer.pl
+https://raw.githubusercontent.com/swuecho/swuecho.github.io/master/scripts/search.pl
 
 
