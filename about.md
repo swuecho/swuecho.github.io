@@ -17,7 +17,7 @@ permalink: /about/
 
 2013-2015
 
->软件开发 (Perl, Javascript, SQL)。
+>软件开发 (Perl, Javascript, SQL)
 
 2015-2017
 
