@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Small Tools
-permalink: /tool/
+title: Misc 
+permalink: /misc/
 ---
 
 ##### [Number to Written Number translator](http://blog.meihao.us/app/tool.html)

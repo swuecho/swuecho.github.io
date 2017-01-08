@@ -1,16 +1,20 @@
-﻿---
+---
 layout: page
 title: About
 permalink: /about/
 ---
 
 
-<h3>我</h3>
+<h3>经历</h3>
 
-我学习植物保护四年，昆虫学两年，
-毕业后到现在做软件开发。
+2007-2011 本科，植物保护
 
-<h3>More<h3>
+2011-2013 硕士，昆虫学
+
+2013-2015 软件开发 (Perl, Javascript, SQL)
+
+2015-2017 免疫信息学(Multiple Sclerosis)
+
 
 
 
