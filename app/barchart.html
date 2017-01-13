@@ -16,7 +16,7 @@ nv.addGraph(function() {
       .x(function(d) { return d.label })    //Specify the data accessors.
       .y(function(d) { return d.value })
       .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
-      .showValues(true)       //...instead, show the bar value right on top of each bar.
+      .showValues(false)       //...instead, show the bar value right on top of each bar.
       ;
 
   d3.select('#chart svg')
