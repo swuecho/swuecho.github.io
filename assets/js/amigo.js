@@ -3,7 +3,7 @@ var my_canvas = document.getElementById("canvas");         var list = [['股哥'
 
 var div = document.getElementById("sourrounding_div");
 
-canvas.height = div.offsetHeight;
-canvas.width  = div.offsetWidth;
+my_canvas.height = div.offsetHeight;
+my_canvas.width  = div.offsetWidth;
 
 WordCloud(my_canvas, { list: list } );
