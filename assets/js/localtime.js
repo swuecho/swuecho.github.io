@@ -7,7 +7,7 @@ new Vue({
     transform: function () {
       var date_string= this.message;
       var date = new Date(date_string);
-      return date.toSource()
+      return date.toString()
     }
   }
 })
