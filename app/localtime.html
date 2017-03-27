@@ -2,10 +2,10 @@
 <title>Widgets</title>
 <body>
 <div id="app">
-<p> please input a number, such as 1234</p>
+<p> please enter a time string</p>
 <input v-model="message">
-<p>{{ message }}</p>
-<p>{{ transform(message)}}</p>
+<p>entered time string: {{ message }}</p>
+<p>local time is: {{ transform(message)}}</p>
 </div>
 <p>
 <script src="/assets/js/localtime.js">
