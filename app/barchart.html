@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+<link href="/assets/js/nv.d3.css" rel="stylesheet">
+<script src="/assets/js/nv.d3.js"></script>
+</head>
+<body>
+<div id="chart">
+    <svg></svg>
+</div>
+<script>
+nv.addGraph(function() {
+  var chart = nv.models.discreteBarChart()
+      .x(function(d) { return d.label })    //Specify the data accessors.
+      .y(function(d) { return d.value })
+      .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
+      .showValues(false)       //...instead, show the bar value right on top of each bar.
+      ;
+
+  d3.select('#chart svg')
+      .datum(exampleData())
+      .call(chart);
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
+
+//Each bar represents a single discrete quantity.
+function exampleData() {
+ return  [ 
+    {
+      key: "Cumulative Return",
+      values:  [{'label': 'ACAD', 'value': 148},
+ {'label': '流泪', 'value': 91},
+ {'label': '3K', 'value': 75},
+ {'label': 'HTZ', 'value': 72},
+ {'label': '阿米', 'value': 60},
+ {'label': 'LABD', 'value': 55},
+ {'label': 'FANG', 'value': 55},
+ {'label': '亏飞', 'value': 46},
+ {'label': '偷笑', 'value': 38},
+ {'label': 'BOO', 'value': 37},
+ {'label': 'CCJ', 'value': 31},
+ {'label': '斗哥', 'value': 29},
+ {'label': 'RT', 'value': 29},
+ {'label': '今天', 'value': 26},
+ {'label': 'ICPT', 'value': 26},
+ {'label': '上官云', 'value': 26},
+ {'label': 'TVIX', 'value': 26},
+ {'label': '小星星', 'value': 25},
+ {'label': '割肉', 'value': 25},
+ {'label': '昨天', 'value': 24},
+ {'label': '大牛', 'value': 24},
+ {'label': '现在', 'value': 24},
+ {'label': 'UNG', 'value': 23},
+ {'label': 'UVXY', 'value': 23},
+ {'label': '翻倍', 'value': 22},
+ {'label': '可以', 'value': 22},
+ {'label': '谢谢', 'value': 21},
+ {'label': 'DC', 'value': 20},
+ {'label': 'AD', 'value': 20},
+ {'label': '五道口', 'value': 20},
+ {'label': '腰斩', 'value': 19},
+ {'label': '谷歌', 'value': 18},
+ {'label': '灰尘', 'value': 18},
+ {'label': '准备', 'value': 18},
+ {'label': '收购', 'value': 17},
+ {'label': '时光', 'value': 17},
+ {'label': '全仓', 'value': 17},
+ {'label': 'CLVS', 'value': 17},
+ {'label': 'MUMU', 'value': 17},
+ {'label': '油股', 'value': 17},
+ {'label': '短线', 'value': 17},
+ {'label': '多谢', 'value': 16},
+ {'label': '时候', 'value': 16},
+ {'label': '多少', 'value': 16},
+ {'label': '已经', 'value': 16},
+ {'label': '这个', 'value': 16},
+ {'label': '感觉', 'value': 16},
+ {'label': '雾里看花', 'value': 16},
+ {'label': '股票', 'value': 16},
+ {'label': '不要', 'value': 15},
+ {'label': '出水', 'value': 15},
+ {'label': '亏了', 'value': 15},
+ {'label': '不会', 'value': 15},
+ {'label': '这么', 'value': 14},
+ {'label': '什么', 'value': 14},
+ {'label': '蝌蚪', 'value': 14},
+ {'label': 'LUCUS', 'value': 14},
+ {'label': 'ILMN', 'value': 14},
+ {'label': 'ORIG', 'value': 14},
+ {'label': 'SOB', 'value': 14},
+ {'label': '冠蓝', 'value': 14},
+ {'label': 'CATHY', 'value': 14},
+ {'label': 'TIMING', 'value': 14},
+ {'label': 'HOLD', 'value': 14},
+ {'label': 'BIOC', 'value': 14},
+ {'label': '师兄', 'value': 14},
+ {'label': '是不是', 'value': 14},
+ {'label': '明天', 'value': 14},
+ {'label': '怎么', 'value': 13},
+ {'label': '不是', 'value': 13},
+ {'label': '赶紧', 'value': 13},
+ {'label': '回调', 'value': 13},
+ {'label': '哈哈', 'value': 13},
+ {'label': '马兰头', 'value': 12},
+ {'label': '老李', 'value': 12},
+ {'label': '出生证明', 'value': 12},
+ {'label': '不错', 'value': 12},
+ {'label': '一半', 'value': 11},
+ {'label': '觉得', 'value': 11},
+ {'label': '加仓', 'value': 11},
+ {'label': '爆烧', 'value': 11},
+ {'label': 'SHLD', 'value': 11},
+ {'label': 'ECHOWUHAO', 'value': 11},
+ {'label': 'CALL', 'value': 11}]
+
+    }
+  ]
+
+}
+</script>
+</body>
