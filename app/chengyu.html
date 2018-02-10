@@ -11,18 +11,22 @@
             <v-content>
                 <v-container fluid>
                     <v-layout justify-center align-center>
-                        <p> 输入成语首字母拼音 </p>
-                        <template>
-                            <v-form>
-                                <v-text-field label="拼音" v-model="message" required></v-text-field>
-                            </v-form>
-                        </template>
-                        <p>entered time string: {{ message }}</p>
-                        <ol>
-                            <li v-for="chengyu in transform(message)">
-                                {{ chengyu }}
-                            </li>
-                        </ol>
+                        <div id="chengyu-input">
+                            <p> 输入成语首字母拼音 </p>
+                            <template>
+                                <v-form>
+                                    <v-text-field label="拼音" v-model="message" required></v-text-field>
+                                </v-form>
+                            </template>
+                        </div>
+                        <div id="chengyu-list">
+                            <p>entered time string: {{ message }}</p>
+                            <ol>
+                                <li v-for="chengyu in transform(message)">
+                                    {{ chengyu }}
+                                </li>
+                            </ol>
+                        </div>
                     </v-layout>
                 </v-container>
             </v-content>
