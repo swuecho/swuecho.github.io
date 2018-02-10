@@ -9,12 +9,12 @@
     <div id="app">
         <v-app>
             <v-content>
+                <v-toolbar light>
+                    <v-toolbar-title> 输入成语首字母拼音 </v-toolbar-title>
+                    <v-spacer></v-spacer>
+                </v-toolbar>
                 <v-container>
                     <v-layout>
-                        <v-toolbar light>
-                            <v-toolbar-title> 输入成语首字母拼音 </v-toolbar-title>
-                            <v-spacer></v-spacer>
-                        </v-toolbar>
                         <v-form>
                             <v-text-field label="拼音" v-model="message" required></v-text-field>
                         </v-form>
