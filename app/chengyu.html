@@ -1,17 +1,26 @@
-<script src="/assets/js/vue.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
 <title>成语接龙</title>
 
 <body>
     <div id="app">
-        <p> please enter a time string</p>
-        <input v-model="message">
-        <p>entered time string: {{ message }}</p>
-        <ol>
-            <li v-for="chengyu in transform(message)">
-                {{ chengyu }}
-            </li>
-        </ol>
+        <v-app>
+            <v-content>
+                <p> please enter a time string</p>
+                <input v-model="message">
+                <p>entered time string: {{ message }}</p>
+                <ol>
+                    <li v-for="chengyu in transform(message)">
+                        {{ chengyu }}
+                    </li>
+                </ol>
+            </v-content>
+        </v-app>
     </div>
 </body>
-<script src="/assets/js/chengyu.js">
-</script>
+<script src="/assets/js/vue.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+<script src="/assets/js/chengyu.js"></script>
