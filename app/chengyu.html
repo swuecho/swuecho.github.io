@@ -10,7 +10,11 @@
         <v-app>
             <v-content>
                 <p> please enter a time string</p>
-                <input v-model="message">
+                <template>
+                    <v-form>
+                        <v-text-field label="Pinyin" v-model="message" required></v-text-field>
+                    </v-form>
+                </template>
                 <p>entered time string: {{ message }}</p>
                 <ol>
                     <li v-for="chengyu in transform(message)">
