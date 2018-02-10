@@ -8,7 +8,7 @@ new Vue({
   },
   methods: {
     transform: function () {
-      let pingyin = this.message;
+      let pinyin = this.message;
       return dict[pinyin]
     }
   }
