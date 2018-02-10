@@ -6,13 +6,12 @@
         <p> please enter a time string</p>
         <input v-model="message">
         <p>entered time string: {{ message }}</p>
-        <p> transform(message)</p>
         <ol>
             <li v-for="chengyu in transform(message)">
                 {{ chengyu }}
             </li>
         </ol>
     </div>
-    <p>
-        <script src="/assets/js/chengyu.js">
-        </script>
+</body>
+<script src="/assets/js/chengyu.js">
+</script>
