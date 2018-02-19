@@ -375,6 +375,12 @@ new Vue({
   data: {
     message: 'jian'
   },
+  computed: {
+    url() {
+      // not still not work
+      return "http://www.google.com/search?q=" + this.message
+    }
+  },
   methods: {
     transform: function () {
       let pinyin = this.message;

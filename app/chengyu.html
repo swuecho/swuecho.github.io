@@ -18,11 +18,16 @@
                             </v-form>
                         </v-flex>
                         <v-flex xs6 offset-xs3 text-xs-center>
-                            <ol>
-                                <li v-for="chengyu in transform(message)">
-                                    {{ chengyu }}
-                                </li>
-                            </ol>
+                            <v-expansion-panel>
+                                <v-expansion-panel-content v-for="(item,i) in transform(message)" :key="i">
+                                    <div slot="header">{{ item }} </div>
+                                    <v-card light>
+                                        <v-card-text>
+                                            <a :href="url">Google 一下</a>
+                                        </v-card-text>
+                                    </v-card>
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
                         </v-flex>
                     </v-layout>
                 </v-container>
