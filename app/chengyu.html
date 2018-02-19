@@ -10,20 +10,20 @@
     <div id="app">
         <v-app>
             <v-content>
-                <v-toolbar light>
-                    <v-toolbar-title> 输入成语首字母拼音 </v-toolbar-title>
-                    <v-spacer></v-spacer>
-                </v-toolbar>
-                <v-form>
-                    <v-text-field label="拼音" v-model="message" required></v-text-field>
-                </v-form>
-                <v-container fluid>
-                    <v-layout justify-center align-center>
-                        <ol>
-                            <li v-for="chengyu in transform(message)">
-                                {{ chengyu }}
-                            </li>
-                        </ol>
+                <v-container align-center>
+                    <v-layout row wrap>
+                        <v-flex xs6 offset-xs3>
+                            <v-form>
+                                <v-text-field label="拼音(输入首字母拼音查找成语)" v-model="message" required></v-text-field>
+                            </v-form>
+                        </v-flex>
+                        <v-flex xs6 offset-xs3 text-xs-center>
+                            <ol>
+                                <li v-for="chengyu in transform(message)">
+                                    {{ chengyu }}
+                                </li>
+                            </ol>
+                        </v-flex>
                     </v-layout>
                 </v-container>
             </v-content>
