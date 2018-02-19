@@ -1,13 +1,31 @@
-<script src="/assets/js/vue.js"></script>
+<meta charset="utf-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+<link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
 <title>Widgets</title>
-<body>
-<div id="app">
-<p> please enter a time string</p>
-<input v-model="message">
-<p>entered time string: {{ message }}</p>
-<p>local time is: {{ transform(message)}}</p>
-</div>
-<p>
-<script src="/assets/js/localtime.js">
-</script>
 
+<body>
+    <div id="app">
+        <v-app>
+            <v-content>
+                <v-container align-center>
+                    <v-layout row wrap>
+                        <v-flex xs6 offset-xs3>
+                            <v-form>
+                                <v-text-field label="please enter a time string(replace the one entered)" v-model="message" required></v-text-field>
+                            </v-form>
+                        </v-flex>
+                        <v-flex xs6 offset-xs3 text-xs-center>
+                            <p>entered time string: {{ message }}</p>
+                            <p>local time is: {{ transform(message)}}</p>
+                        </v-flex>
+                    </v-layout>
+                </v-container>
+            </v-content>
+        </v-app>
+    </div>
+</body>
+<script src="/assets/js/vue.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+<script src="/assets/js/localtime.js"></script>
