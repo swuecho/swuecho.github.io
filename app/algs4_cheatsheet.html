@@ -1,0 +1,1076 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+
+<head>
+
+  <link rel="apple-touch-icon" href="https://algs4.cs.princeton.edu/apple-touch-icon.png"></link>
+  <link rel="shortcut icon" href="https://algs4.cs.princeton.edu/favicon.ico"></link>
+
+  <link rel="stylesheet" href="https://algs4.cs.princeton.edu/algs4.css" type="text/css" media="screen"></link>
+
+  <meta name="google-site-verification" content="nYspbl5bNBQrNZKguiAAFTMVM7sq2P1WQYc8Oi6Okl0" />
+  <meta name="msvalidate.01" content="D4B7F6DF793EFF34DE96F611C2A367A5" />
+<!-- IE HACKS -->
+<!--[if IE]>
+<style type="text/css" media="screen">
+ #menu ul li {float: left; width: 100%;}
+</style>
+<![endif]-->
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">
+body {
+behavior: url(/csshover.htc);
+} 
+#menu ul li {float: left; width: 100%;}
+#menu ul li a {height: 1%;} 
+
+#menu a, #menu h2 {
+font: bold 0.9em/1.5em arial, helvetica, sans-serif;
+} 
+
+</style>
+<![endif]-->
+  <title> Algorithms and Data Structures Cheatsheet</title>
+
+  <META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+  <META NAME="AUTHOR" CONTENT="Robert Sedgewick and Kevin Wayne">
+  <META NAME="KEYWORDS" CONTENT="Algorithms and Data Structures Cheatsheet,Algorithms,4th edition,data structures,Java,intro,introduction,Sedgewick,Wayne">
+  <META NAME="DESCRIPTION" CONTENT="The textbook Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne surveys the most important algorithms and data structures in use today. The broad perspective taken makes it an appropriate introduction to the field.">
+  <META NAME="TITLE" CONTENT="Algorithms and Data Structures Cheatsheet. Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne.">
+  <META NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
+
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script type='text/javascript' src='/media/swfobject.js'></script>
+
+</head>
+
+
+<body>
+
+  <div id="menu">
+
+  </div>
+
+
+  <div id="content">
+    <H1 class=c enter>Algorithms and Data Structures Cheatsheet</H1>
+
+    <p>
+      <br> We summarize the performance characteristics of classic algorithms and data structures for sorting, priority queues,
+      symbol tables, and graph processing.
+
+
+
+      <p>
+        <br>
+        <h2>Sorting.</h2>
+        The table below summarizes the number of compares for a variety of sorting algorithms, as implemented in this textbook. It
+        includes leading constants but ignores lower-order terms.
+
+        <p>
+
+          <center>
+            <table cellspacing="1" cellpadding="5" border="0" bgcolor="#ffffff">
+
+              <tr align=center>
+                <th width=1 00>ALGORITHM</th>
+                <th width=1 00>CODE</th>
+                <th width=7 5>IN PLACE</th>
+                <th width=7 5>STABLE</th>
+                <th width=7 5>BEST</th>
+                <th width=7 5>AVERAGE</th>
+                <th width=7 5>WORST</th>
+                <th width=2 50>REMARKS</th>
+              </tr>
+
+
+              <tr align=center bgcolor="#ebebeb">
+                <td>
+                  <b>selection sort</b>
+                </td>
+                <td>
+                  <a title="Selection" href="../21elementary/Selection.java.html">Selection.java</a>
+                </td>
+                <td>&#10004;</td>
+                <td></td>
+                <td>&frac12;
+                  <em>n</em>
+                  <sup> 2</sup>
+                </td>
+                <td>&frac12;
+                  <em>n</em>
+                  <sup> 2</sup>
+                </td>
+                <td>&frac12;
+                  <em>n</em>
+                  <sup> 2</sup>
+                </td>
+                <td>
+                  <em>n</em> exchanges;
+                  <br>quadratic in best case</td>
+              </tr>
+
+              <tr align=center bgcolor="#ebebeb">
+                <td>
+                  <b>insertion sort</b>
+                </td>
+                <td>
+                  <a title="Insertion" href="../21elementary/Insertion.java.html">Insertion.java</a>
+                </td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>
+                  <em>n</em>
+                </td>
+                <td>&frac14;
+                  <em>n</em>
+                  <sup> 2</sup>
+                </td>
+                <td>&frac12;
+                  <em>n</em>
+                  <sup> 2</sup>
+                </td>
+                <td>use for small or
+                  <br>partially-sorted arrays</td>
+              </tr>
+
+              <tr align=center bgcolor="#ebebeb">
+                <td>
+                  <b>bubble sort</b>
+                </td>
+                <td>
+                  <a title="Bubble" href="../21elementary/Bubble.java.html">Bubble.java</a>
+                </td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>
+                  <em>n</em>
+                </td>
+                <td>&frac12;
+                  <em>n</em>
+                  <sup> 2</sup>
+                </td>
+                <td>&frac12;
+                  <em>n</em>
+                  <sup> 2</sup>
+                </td>
+                <td>rarely useful;
+                  <br>use insertion sort instead</td>
+              </tr>
+
+              <tr align=center bgcolor="#ebebeb">
+                <td>
+                  <b>shellsort</b>
+                </td>
+                <td>
+                  <a title="Shell" href="../21elementary/Shell.java.html">Shell.java</a>
+                </td>
+                <td>&#10004;</td>
+                <td></td>
+                <td>
+                  <em>n</em> log
+                  <sub>3</sub>
+                  <em>n</em>
+                </td>
+                <td>unknown</td>
+                <td>c
+                  <em>n</em>
+                  <sup> 3/2</sup>
+                </td>
+                <td>tight code;
+                  <br>subquadratic</td>
+              </tr>
+
+              <tr align=center bgcolor="#ebebeb">
+                <td>
+                  <b>mergesort</b>
+                </td>
+                <td>
+                  <a title="Merge" href="../22mergesort/Merge.java.html">Merge.java</a>
+                </td>
+                <td></td>
+                <td>&#10004;</td>
+                <td>&frac12;
+                  <em>n</em> lg
+                  <em>n</em>
+                </td>
+                <td>
+                  <em>n</em> lg
+                  <em>n</em>
+                </td>
+                <td>
+                  <em>n</em> lg
+                  <em>n</em>
+                </td>
+                <td>
+                  <em>n</em> log
+                  <em>n</em> guarantee;
+                  <br>stable</td>
+              </tr>
+
+              <tr align=center bgcolor="#ebebeb">
+                <td>
+                  <b>quicksort</b>
+                </td>
+                <td>
+                  <a title="Quick" href="../23quicksort/Quick.java.html">Quick.java</a>
+                </td>
+                <td>&#10004;</td>
+                <td></td>
+                <td>
+                  <em>n</em> lg
+                  <em>n</em>
+                </td>
+                <td>2
+                  <em>n</em> ln
+                  <em>n</em>
+                </td>
+                <td>&frac12;
+                  <em>n</em>
+                  <sup> 2</sup>
+                </td>
+                <td>
+                  <em>n</em> log
+                  <em>n</em> probabilistic guarantee;
+                  <br>fastest in practice</td>
+              </tr>
+
+              <tr align=center bgcolor="#ebebeb">
+                <td>
+                  <b>heapsort</b>
+                </td>
+                <td>
+                  <a title="Heap" href="../24pq/Heap.java.html">Heap.java</a>
+                </td>
+                <td>&#10004;</td>
+                <td></td>
+                <td>
+                  <em>n</em>
+                  <sup>&dagger;</sup>
+                </td>
+                <td>2
+                  <em>n</em> lg
+                  <em>n</em>
+                </td>
+                <td>2
+                  <em>n</em> lg
+                  <em>n</em>
+                </td>
+                <td>
+                  <em>n</em> log
+                  <em>n</em> guarantee;
+                  <br>in place</td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <td>
+                    <td>
+                      <td>
+                        <td>
+                          <td>
+                            <td>
+                              <td colspan=2>
+                                <sup>&dagger;</sup>
+                                <em>n</em> lg
+                                <em>n</em> if all keys are distinct</td>
+              </tr>
+
+            </table>
+          </center>
+
+          <p>
+            <br>
+
+            <p>
+              <h2>Priority queues.</h2>
+              The table below summarizes the order of growth of the running time of operations for a variety of priority queues, as implemented
+              in this textbook. It ignores leading constants and lower-order terms. Except as noted, all running times are
+              worst-case running times.
+
+              <p>
+
+                <center>
+                  <table cellspacing="1" cellpadding="5" border="0" bgcolor="#ffffff">
+
+                    <tr align=center>
+                      <th width=1 50>DATA STRUCTURE</th>
+                      <th width=1 75>CODE</th>
+                      <th width=7 5>INSERT</th>
+                      <th width=7 5>DEL-MIN</th>
+                      <th width=7 5>MIN</th>
+                      <th width=7 5>DEC-KEY</th>
+                      <th width=7 5>DELETE</th>
+                      <th width=7 5>MERGE</th>
+                    </tr>
+
+                    <tr align=center bgcolor="#ebebeb">
+                      <td>
+                        <b>array</b>
+                      </td>
+                      <td>
+                        <a title="BruteIndexMinPQ" href="../24pq/BruteIndexMinPQ.java.html">BruteIndexMinPQ.java</a>
+                      </td>
+                      <td>1</td>
+                      <td>
+                        <em>n</em>
+                      </td>
+                      <td>
+                        <em>n</em>
+                      </td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>
+                        <em>n</em>
+                      </td>
+                    </tr>
+
+                    <tr align=center bgcolor="#ebebeb">
+                      <td>
+                        <b>binary heap</b>
+                      </td>
+                      <td>
+                        <a title="IndexMinPQ" href="../24pq/IndexMinPQ.java.html">IndexMinPQ.java</a>
+                      </td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                      <td>1</td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                      <td>
+                        <em>n</em>
+                      </td>
+                    </tr>
+
+                    <tr align=center bgcolor="#ebebeb">
+                      <td>
+                        <b>
+                          <em>d</em>-way heap</b>
+                      </td>
+                      <td>
+                        <a title="IndexMultiwayMinPQ" href="../99misc/IndexMultiwayMinPQ.java.html">IndexMultiwayMinPQ.java</a>
+                      </td>
+                      <td>log
+                        <sub>
+                          <em>d</em>
+                        </sub>
+                        <em>n</em>
+                      </td>
+                      <td>
+                        <em>d</em> log
+                        <sub>
+                          <em>d</em>
+                        </sub>
+                        <em>n</em>
+                      </td>
+                      <td>1</td>
+                      <td>log
+                        <sub>
+                          <em>d</em>
+                        </sub>
+                        <em>n</em>
+                      </td>
+                      <td>
+                        <em>d</em> log
+                        <sub>
+                          <em>d</em>
+                        </sub>
+                        <em>n</em>
+                      </td>
+                      <td>
+                        <em>n</em>
+                      </td>
+                    </tr>
+
+                    <tr align=center bgcolor="#ebebeb">
+                      <td>
+                        <b>binomial heap</b>
+                      </td>
+                      <td>
+                        <a title="IndexBinomialMinPQ" href="../99misc/IndexBinomialMinPQ.java.html">IndexBinomialMinPQ.java</a>
+                      </td>
+                      <td>1</td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                      <td>1</td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                    </tr>
+
+                    <tr align=center bgcolor="#ebebeb">
+                      <td>
+                        <b>Fibonacci heap</b>
+                      </td>
+                      <td>
+                        <a title="IndexFibonacciMinPQ" href="../99misc/IndexFibonacciMinPQ.java.html">IndexFibonacciMinPQ.java</a>
+                      </td>
+                      <td>1</td>
+                      <td>log
+                        <em>n</em>
+                        <sup>&dagger;</sup>
+                      </td>
+                      <td>1</td>
+                      <td>1
+                        <sup>&dagger;</sup>
+                      </td>
+                      <td>log
+                        <em>n</em>
+                        <sup>&dagger;</sup>
+                      </td>
+                      <td>log
+                        <em>n</em>
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td>
+                        <td>
+                          <td>
+                            <td>
+                              <td>
+                                <td>
+                                  <td colspan=2>
+                                    <sup>&dagger;</sup> amortized guarantee
+                                  </td>
+                    </tr>
+
+                  </table>
+                </center>
+
+                <p>
+                  <br>
+
+                  <p>
+                    <h2>Symbol tables.</h2>
+                    The table below summarizes the order of growth of the running time of operations for a variety of symbol tables, as implemented
+                    in this textbook. It ignores leading constants and lower-order terms.
+                    <!-- Except as noted, all running times are worst-case running times. -->
+
+                    <p>
+
+                      <center>
+                        <table cellspacing="1" cellpadding="5" border="0" bgcolor="#ffffff">
+
+                          <tr align=center>
+                            <td></td>
+                            <td></td>
+                            <th colspan=3>worst case</th>
+                            <th colspan=3>average case</th>
+                          </tr>
+                          <tr align=center>
+                            <th width=1 50>DATA STRUCTURE</th>
+                            <th width=1 75>CODE</th>
+                            <th width=7 5>SEARCH</th>
+                            <th width=7 5>INSERT</th>
+                            <th width=7 5>DELETE</th>
+                            <th width=7 5>SEARCH</th>
+                            <th width=7 5>INSERT</th>
+                            <th width=7 5>DELETE</th>
+                          </tr>
+
+                          <tr align=center bgcolor="#ebebeb">
+                            <td>
+                              <b>sequential search</b>
+                              <br>(in an unordered array)</td>
+                            <td>
+                              <a title="SequentialSearchST" href="../31elementary/SequentialSearchST.java.html">SequentialSearchST.java</a>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                          </tr>
+
+                          <tr align=center bgcolor="#ebebeb">
+                            <td>
+                              <b>binary search</b>
+                              <br>(in a sorted array)</td>
+                            <td>
+                              <a title="BinarySearchST" href="../31elementary/BinarySearchST.java.html">BinarySearchST.java</a>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                          </tr>
+
+                          <tr align=center bgcolor="#ebebeb">
+                            <td>
+                              <b>binary search tree</b>
+                              <br>(unbalanced)</td>
+                            <td>
+                              <a title="BST" href="../32bst/BST.java.html">BST.java</a>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>sqrt(
+                              <em>n</em>)</td>
+                          </tr>
+
+                          <tr align=center bgcolor="#ebebeb">
+                            <td>
+                              <b>red-black BST</b>
+                              <br>(left-leaning)</td>
+                            <td>
+                              <a title="RedBlackBST" href="../33balanced/RedBlackBST.java.html">RedBlackBST.java</a>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                            <td>log
+                              <em>n</em>
+                            </td>
+                          </tr>
+
+                          <tr align=center bgcolor="#ebebeb">
+                            <td>
+                              <b>hash table</b>
+                              <br>(separate-chaining)</td>
+                            <td>
+                              <a title="SeparateChainingHashST" href="../34hash/SeparateChainingHashST.java.html">SeparateChainingHashST.java</a>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>1
+                              <sup>&dagger;</sup>
+                            </td>
+                            <td>1
+                              <sup>&dagger;</sup>
+                            </td>
+                            <td>1
+                              <sup>&dagger;</sup>
+                            </td>
+                          </tr>
+
+                          <tr align=center bgcolor="#ebebeb">
+                            <td>
+                              <b>hash table</b>
+                              <br>(linear-probing)</td>
+                            <td>
+                              <a title="LinearProbingHashST" href="../34hash/LinearProbingHashST.java.html">LinearProbingHashST.java</a>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>
+                              <em>n</em>
+                            </td>
+                            <td>1
+                              <sup>&dagger;</sup>
+                            </td>
+                            <td>1
+                              <sup>&dagger;</sup>
+                            </td>
+                            <td>1
+                              <sup>&dagger;</sup>
+                            </td>
+                          </tr>
+
+
+                          <tr>
+                            <td>
+                              <td>
+                                <td>
+                                  <td>
+                                    <td>
+                                      <td colspan=3>
+                                        <sup>&dagger;</sup> uniform hashing assumption
+                                      </td>
+                          </tr>
+
+                        </table>
+                      </center>
+
+                      <p>
+                        <br>
+
+                        <p>
+                          <h2>Graph processing.</h2>
+                          The table below summarizes the order of growth of the worst-case running time and memory usage (beyond the memory for the
+                          graph itself) for a variety of graph-processing problems, as implemented in this textbook. It ignores
+                          leading constants and lower-order terms. All running times are worst-case running times.
+
+
+                          <p>
+                            <br>
+
+                            <center>
+                              <table cellspacing="1" cellpadding="5" border="0" bgcolor="#ffffff">
+
+                                <tr align=center>
+                                  <th width=2 50>PROBLEM</th>
+                                  <th width=1 75>ALGORITHM</th>
+                                  <th width=1 75>CODE</th>
+                                  <th width=1 00>TIME</th>
+                                  <th width=1 00>SPACE</th>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>path</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="DepthFirstPaths" href="../41graph/DepthFirstPaths.java.html">DepthFirstPaths.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>cycle</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="Cycle" href="../41graph/Cycle.java.html">Cycle.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>directed cycle</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="DirectedCycle" href="../42digraph/DirectedCycle.java.html">DirectedCycle.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>topological sort</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="Topological" href="../42digraph/Topological.java.html">Topological.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>bipartiteness / odd cycle</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="Bipartite" href="../41graph/Bipartite.java.html">Bipartite.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>connected components</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="CC" href="../41graph/CC.java.html">CC.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>strong components</b>
+                                  </td>
+                                  <td>Kosaraju&ndash;Sharir</td>
+                                  <td>
+                                    <a title="KosarajuSharirSCC" href="../42digraph/KosarajuSharirSCC.java.html">KosarajuSharirSCC.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>Eulerian cycle</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="EulerianCycle" href="../41graph/EulerianCycle.java.html">EulerianCycle.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>directed Eulerian cycle</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="DirectedEulerianCycle" href="../42digraph/DirectedEulerianCycle.java.html">DirectedEulerianCycle.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>transitive closure</b>
+                                  </td>
+                                  <td>DFS</td>
+                                  <td>
+                                    <a title="TransitiveClosure" href="../42digraph/TransitiveClosure.java.html">TransitiveClosure.java</a>
+                                  </td>
+                                  <td>
+                                    <em>V</em> (
+                                    <em>E</em> +
+                                    <em>V</em>)</td>
+                                  <td>
+                                    <em>V</em>
+                                    <sup> 2</sup>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>minimum spanning tree</b>
+                                  </td>
+                                  <td>Kruskal</td>
+                                  <td>
+                                    <a title="KruskalMST" href="../43mst/KruskalMST.java.html">KruskalMST.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> log
+                                    <em>E</em>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>minimum spanning tree</b>
+                                  </td>
+                                  <td>Prim</td>
+                                  <td>
+                                    <a title="PrimMST" href="../43mst/PrimMST.java.html">PrimMST.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> log
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>minimum spanning tree</b>
+                                  </td>
+                                  <td>Boruvka</td>
+                                  <td>
+                                    <a title="BoruvkaMST" href="../43mst/BoruvkaMST.java.html">BoruvkaMST.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> log
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>shortest paths (unit weights)</b>
+                                  </td>
+                                  <td>BFS</td>
+                                  <td>
+                                    <a title="BreadthFirstPaths" href="../41graph/BreadthFirstPaths.java.html">BreadthFirstPaths.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> +
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>shortest paths (nonnegative weights)</b>
+                                  </td>
+                                  <td>Dijkstra</td>
+                                  <td>
+                                    <a title="DijkstraSP" href="../44sp/DijkstraSP.java.html">DijkstraSP.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em> log
+                                    <em>V</em>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>shortest paths (negative weights)</b>
+                                  </td>
+                                  <td>Bellman&ndash;Ford</td>
+                                  <td>
+                                    <a title="BellmanFordSP" href="../44sp/BellmanFordSP.java.html">BellmanFordSP.java</a>
+                                  </td>
+                                  <td>
+                                    <em>V</em> (
+                                    <em>V</em> +
+                                    <em>E</em>)</td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>all-pairs shortest paths</b>
+                                  </td>
+                                  <td>Floyd&ndash;Warshall</td>
+                                  <td>
+                                    <a title="FloydWarshall" href="../44sp/FloydWarshall.java.html">FloydWarshall.java</a>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                    <sup> 3</sup>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                    <sup> 2</sup>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>maxflow&ndash;mincut</b>
+                                  </td>
+                                  <td>Ford&ndash;Fulkerson</td>
+                                  <td>
+                                    <a title="FordFulkerson" href="../64maxflow/FordFulkerson.java.html">FordFulkerson.java</a>
+                                  </td>
+                                  <td>
+                                    <em>E</em>
+                                    <em>V</em> (
+                                    <em>E</em> +
+                                    <em>V</em>)</td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>bipartite matching</b>
+                                  </td>
+                                  <td>Hopcroft&ndash;Karp</td>
+                                  <td>
+                                    <a title="HopcroftKarp" href="../65reductions/HopcroftKarp.java.html">HopcroftKarp.java</a>
+                                  </td>
+                                  <td>
+                                    <em>V</em>
+                                    <sup> &frac12;</sup> (
+                                    <em>E</em> +
+                                    <em>V</em>)</td>
+                                  <td>
+                                    <em>V</em>
+                                  </td>
+                                </tr>
+
+                                <tr align=center bgcolor="#ebebeb">
+                                  <td>
+                                    <b>assignment problem</b>
+                                  </td>
+                                  <td>successive shortest paths</td>
+                                  <td>
+                                    <a title="AssignmentProblem" href="../65reductions/AssignmentProblem.java.html">AssignmentProblem.java</a>
+                                  </td>
+                                  <td>
+                                    <em>n</em>
+                                    <sup> 3</sup> log
+                                    <em>n</em>
+                                  </td>
+                                  <td>
+                                    <em>n</em>
+                                    <sup> 2</sup>
+                                  </td>
+                                </tr>
+
+
+                              </table>
+
+                            </center>
+
+
+
+
+
+                            <br>
+                            <br>
+                            <p class=f ooter>
+                              <em>Last modified on February 21, 2017.</em>
+                              <br>
+                              <br> Copyright &copy; 2000&ndash;2016
+                              <a href="https://www.cs.princeton.edu/~rs" class=f ooter>Robert Sedgewick</a>
+                              and
+                              <a href="https://www.cs.princeton.edu/~wayne" class=f ooter>Kevin Wayne</a>. All rights reserved.
+  </div>
+
+
+
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost +
+      "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-10811519-2");
+      pageTracker._trackPageview();
+    } catch (err) {}
+  </script>
+
+</body>
+
+</html>
