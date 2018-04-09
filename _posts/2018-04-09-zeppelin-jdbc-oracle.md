@@ -10,6 +10,8 @@ for 11gR2, the driver version is ojdbc6.jar
 
 # create osql driver
 
-![](/assets/img/zeppline_osql.png)
+
+<img src="/assets/img/zeppline_osql.png" alt="alt text" width="800" height="600">
+
 
 
