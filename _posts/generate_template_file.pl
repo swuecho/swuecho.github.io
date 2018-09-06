@@ -1,4 +1,3 @@
-#!/home/hwu/.plenv/shims/perl
 use v5.18;
 use POSIX qw(strftime);
 if ( not defined $ARGV[0] ) {
