@@ -14,8 +14,10 @@ git config --list --show-origin
 
 # add alias 
 
-add an alias to the __[alias]__ section
+add an alias to the __[alias]__ section of one of the .gitconfig file
 
+```
 [alias]
 aa = add .
+```
 
