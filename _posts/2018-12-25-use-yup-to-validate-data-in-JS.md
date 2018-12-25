@@ -14,7 +14,7 @@ let schema = yup.string().email() ;
 
 schema.isValidSync(name)
 ```
-![run](https://runkit.com/swuecho/yup-test-string)
+[run](https://runkit.com/swuecho/yup-test-string)
 
 # validate a object 
 
@@ -36,7 +36,7 @@ try {
     console.log(e.errors);
 }
 ```
-![run](https://runkit.com/swuecho/yup-validate-object)
+[run](https://runkit.com/swuecho/yup-validate-object)
 
 ```{javascript}
 mixed.isValid(value: any, options: ?object): Promise<boolean>
