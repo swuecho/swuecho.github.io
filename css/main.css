@@ -421,4 +421,33 @@ ul.listing {
       ul.listing li.listing-seperator:before {
         content: "⭠ ";
         color: #ccc; }
+/* doc note from quazar */
+
+
+.doc-note {
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 16px 0;
+  padding: 16px 24px;
+  font-size: 1em;
+  border-width: 0 5px 0;
+  border-style: solid;
+  border-color: #9e9e9e;
+  letter-spacing: 0.5px;
+}
+
+.doc-note--warning {
+  background-color: #f9e09b;
+  border-color: #f2c037;
+}
+
+.doc-note--danger {
+  background-color: #c1f4cd;
+  border-color: #21ba45;
+}
+
+.doc-note--danger {
+  background-color: #ffc0c6;
+  border-color: #c10015;
+}
 
