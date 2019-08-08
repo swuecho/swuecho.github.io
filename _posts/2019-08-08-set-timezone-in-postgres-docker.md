@@ -32,7 +32,7 @@ db => show timezone;
 
 
 ```
-survey=> select * from pg_timezone_names where name LIKE '%Shanghai%';
+db => select * from pg_timezone_names where name LIKE '%Shanghai%';
         name         | abbrev | utc_offset | is_dst
 ---------------------+--------+------------+--------
  posix/Asia/Shanghai | CST    | 08:00:00   | f
