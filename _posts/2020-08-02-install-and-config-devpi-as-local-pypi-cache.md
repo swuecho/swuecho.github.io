@@ -45,5 +45,7 @@ categories: tech
 ## Use the devpi
 
 ```bash
+export PYPI=http://192.168.0.135:3141/root/pypi/+simple/
+export TRUSTED_HOST=192.168.0.135
 pip3 install -i $PYPI --trusted-host=${TRUSTED_HOST}  uwsgi
 ```
