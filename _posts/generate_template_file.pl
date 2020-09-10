@@ -1,7 +1,8 @@
 use v5.18;
 use POSIX qw(strftime);
 if ( not defined $ARGV[0] ) {
-    die "ERROR: please give the tile"
+    die "ERROR: please give the tile: this is the title.
+    \n space will be replaced by - "
 }
 if ( $#ARGV > 0 ) {
     die "ERROR: only one argv is accept"
