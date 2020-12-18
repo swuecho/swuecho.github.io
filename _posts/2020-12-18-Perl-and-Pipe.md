@@ -4,12 +4,12 @@ title:  Perl and Pipe
 date:   2020-12-18 10:48 
 categories: tech 
 ---
-# The Problem
+## The Problem
 
 echo $PATH output is too long. I want to see it line by line. 
 
 
-# First Attempt 
+## First Attempt 
 
 ```sh
 ➜  ~ echo $PATH | perl -E 'say $ARGV[0]'
@@ -23,18 +23,18 @@ why this does not work?
 > because piped content is passed in as `<STDIN>`
 
 
-# Second Attempt
+## Second Attempt
 
 pipe as STDIN 
 
     echo $PATH | perl -E 'say while <STDIN>'
     echo $PATH | perl -E 'while (<STDIN>) { say for split /:/}' 
 
-# The Right Way 
+## The Right Way 
 
     echo $PATH | perl -nE 'say for split /:/'
 
-# Reference
+## Reference
 
 
 > -n causes Perl to assume the following loop around your program, which
