@@ -39,9 +39,9 @@ return M
 
 ## call the function 
 
-```
+```lua
 :lua require'hao'.snake_case()
-``
+```
 
 However, it seems not worth the trouble to write such a long command to change the case.
 
