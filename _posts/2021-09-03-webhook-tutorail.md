@@ -1,15 +1,21 @@
 ---
 layout: post
-title:  webhook tutorail in ubuntu
+title:  webhook tutorial in ubuntu
 date:   2021-09-03 21:33 
 categories: tech 
 ---
 
-1. install using `apt install webhook`
+## install webhook
 
-2. after install, change the default `ExecStart` as show below. 
+`apt install webhook`
 
-The reason is 
+## config system.
+
+check the config path using `sudo systemctl status webhook`
+
+after install, change the default `ExecStart` as show below. 
+
+### why
 
 a. the the default `-hooks webhook.conf` does not tell the format is `json` or `yaml`.
 (I tried to use webhook.yaml or webhook.yml, neither of them works.)
@@ -28,9 +34,10 @@ ExecStart=/usr/bin/webhook -nopanic -hotreload -verbose -hooks /home/hwu/dev/web
 [Install]
 WantedBy=multi-user.target
 ```
-3. first command.
 
-config:
+## write your first webhook
+
+### config:
 
 ```
 [
@@ -43,7 +50,7 @@ config:
 ]
 ```
 
-comand:
+### comand:
 
 ```
 app:~/dev/webhook$ cat config/commands/simple-one.sh
@@ -58,4 +65,6 @@ http://your-host:9000/hooks/simpleone
 ```
 and check the command run dir, see if correct file is touched.
 
-4. valid user in put using trigger-rule
+## valid user input using trigger-rule
+
+TODO:
