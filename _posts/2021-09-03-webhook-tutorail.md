@@ -67,4 +67,5 @@ and check the command run dir, see if correct file is touched.
 
 ## valid user input using trigger-rule
 
-TODO:
+https://github.com/adnanh/webhook/blob/master/docs/Hook-Examples.md#a-simple-webhook-with-a-secret-key-in-get-query
+
