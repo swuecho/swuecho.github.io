@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  expose service of kubenetes 
+title:  Exposing service of Kubernetes in bare metals
 date:   2021-09-28 04:20 
 categories: tech 
 ---
