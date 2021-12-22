@@ -21,7 +21,7 @@ def factorial2(n):
         case 0:
             return 1
         case _ as x:
-            return x * factorial(x-1)
+            return x * factorial2(x-1)
 
 print(factorial(5))
 
