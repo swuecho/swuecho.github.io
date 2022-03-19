@@ -1,3 +1,33 @@
+
+
+
+
+<p>RabbitMQ quickstart
+</p>
+<p>
+</p>
+<pre>
+<code>root@temp:/# /usr/bin/amqp-publish --url=$BROKER_URL -r foo -p -b Hello
+root@temp:/# /usr/bin/amqp-publish --url=$BROKER_URL -r foo -p -b Hello
+root@temp:/# /usr/bin/amqp-consume --url=$BROKER_URL -q job1 -c 1 cat && echo
+banana
+root@temp:/# /usr/bin/amqp-consume --url=$BROKER_URL -q job1 -c 1 cat && echo
+cherry
+root@temp:/# /usr/bin/amqp-declare-queue --url=$BROKER_URL -q job2  -d
+job2
+root@temp:/# /usr/bin/amqp-delete-queue --url=$BROKER_URL -q job2  
+0
+root@temp:/# /usr/bin/amqp-delete-queue --url=$BROKER_URL -q job1  
+5
+root@temp:/# /usr/bin/amqp-delete-queue --url=$BROKER_URL -q job 
+0</code>
+</pre>
+<p>
+</p>
+
+
+
+
 rabbitmq amqp.topic, where message go?
 
 message disappear if no client exists.
