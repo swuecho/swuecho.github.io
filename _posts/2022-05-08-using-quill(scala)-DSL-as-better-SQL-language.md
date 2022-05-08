@@ -132,6 +132,8 @@ pp(run(asia_city_q.sortBy(c => c.population)(Ord.descNullsLast).take(5)))
 
 hover the mouse over pp line, will display the result in a float box.
 
+![](_posts/image/pp_city.png)
+
 
 ## Auto Gen Model for Existing Database
 
