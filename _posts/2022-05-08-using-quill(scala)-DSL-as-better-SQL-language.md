@@ -116,7 +116,7 @@ inline def asia_city_q = quote {
 run(asia_city_q.sortBy(c => c.population)(Ord.descNullsLast).take(5))
 ```
 
-It is recommanded to add a `ctx.close()` at the end of worksheet files. Otherwise, the connection to database will be left open for each worksheet evaluation.
+It is recommended to add a `ctx.close()` at the end of worksheet files. Otherwise, the connection to database will be left open for each worksheet evaluation.
 
 ## Extra: better display support
 
@@ -130,7 +130,7 @@ pp(run(asia_city_q.sortBy(c => c.population)(Ord.descNullsLast).take(5)))
 
 hover the mouse over pp line, will display the result in a float box.
 
-![](_posts/image/pp_city.png)
+![pp city](_posts/image/pp_city.png)
 
 
 ## Extra: Auto Gen Model for Existing Database
