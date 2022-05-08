@@ -8,7 +8,7 @@ categories: tech
 
 ### add quil as dependency in sbt
 
-```
+```sbt
 libraryDependencies ++= Seq(
   "org.postgresql" % "postgresql" % "42.2.8",
   "io.getquill" %% "quill-jdbc" % "3.16.4-Beta28",
@@ -21,7 +21,7 @@ Note: I am using Scala3, for scala2, I guess the setup will be similar.
 
 create a scala worksheet with contents as below:
 
-```
+```scala
 import io.getquill._
 
 import com.zaxxer.hikari.{HikariConfig, HikariDataSource}
@@ -42,10 +42,10 @@ val ctx = new PostgresJdbcContext(SnakeCase, new HikariDataSource(config))
 
 import ctx._
 ```
+
 After set up the quill jdbc context, create the model for your database tables. As shown in https://www.lihaoyi.com/post/WorkingwithDatabasesusingScalaandQuill.html
 
-```
-
+```scala
 case class City(
     id: Int,
     name: String,
@@ -83,7 +83,6 @@ case class CountryLanguage(
 ### Run Query
 
 
-#### simple query
 ```scala
 print(ctx.run(query[City]))
 print(ctx.run(query[Country]))
@@ -105,7 +104,7 @@ ctx.run(
 
 using for,
 
-```
+```scala
 inline def asia_city_q = quote {
   for {
     country <- query[Country].filter(_.continent == "Asia")
@@ -119,8 +118,7 @@ run(asia_city_q.sortBy(c => c.population)(Ord.descNullsLast).take(5))
 
 It is recommanded to add a `ctx.close()` at the end of worksheet files. Otherwise, the connection to database will be left open for each worksheet evaluation.
 
-
-## Extra: better display support.
+## Extra: better display support
 
 so far, the DSL is very easy and enjoyable to work with, but the result display in worksheet is subpar.
 fortunately, we have `pprint`
@@ -135,7 +133,7 @@ hover the mouse over pp line, will display the result in a float box.
 ![](_posts/image/pp_city.png)
 
 
-## Auto Gen Model for Existing Database
+## Extra: Auto Gen Model for Existing Database
 
 ```scala
 //> using scala "2.13.8"
@@ -161,5 +159,3 @@ object GenModel extends App {
 ```
 
 It is very convienient to use scala-cli to run the script above.
-
-
