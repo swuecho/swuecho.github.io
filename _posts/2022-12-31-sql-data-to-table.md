@@ -9,7 +9,7 @@ categories: tech
 
 ### array to table
 
-![](assets/img/sql_data_to_table.png)
+![](/assets/img/sql_data_to_table.png)
 
 ```
 select
