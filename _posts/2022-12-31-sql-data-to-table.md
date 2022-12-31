@@ -21,5 +21,5 @@ from
   ) as dt(survey_id)
 ```
 
-note: seems the `dt(survey_id)` is required
+note: seems the `dt(survey_id)` is required.
 
