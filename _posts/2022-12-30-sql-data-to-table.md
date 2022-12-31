@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  sql: data to table 
-date:   2022-12-31 03:25 
+date:   2022-12-30 03:25 
 categories: tech 
 ---
 
