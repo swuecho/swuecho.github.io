@@ -5,11 +5,11 @@ date:   2022-12-31 11:39
 categories: tech 
 ---
 
-0. even a query will open a transcation.
+## even a query will open a transcation.
 
 this is ugly true due to sqlalchemy and pycogpg.
 
-1. base model object expire after `commit`
+## base model object expire after `commit`
 
 sqlalchemy session maintain state of base model object.  once a commit happen.
 all object in the session will be marked expired. when accesssed, the object will be fetch again on demand.
