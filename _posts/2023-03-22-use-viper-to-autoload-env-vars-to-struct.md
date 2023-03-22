@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  use viper to autoload env vars to struct 
-date:   2023-03-22 10:19 
+date:   2023-03-21 10:19 
 categories: tech 
 ---
 
