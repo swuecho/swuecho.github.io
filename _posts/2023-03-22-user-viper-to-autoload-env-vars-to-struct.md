@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  user viper to autoload env vars to struct 
+title:  use viper to autoload env vars to struct 
 date:   2023-03-22 10:19 
 categories: tech 
 ---
 
-Introduction: 
+# Introduction: 
 
 Configuration management is an important part of any software application. It helps to manage different environments such as development, staging, production, etc. Viper is one of the popular configuration management libraries written for Go. It provides a simple and efficient way to read, write and manage configuration files. In this blog post, we will focus on how to configure viper to read environment variables.
 
