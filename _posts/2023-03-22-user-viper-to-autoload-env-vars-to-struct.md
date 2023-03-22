@@ -11,7 +11,7 @@ Configuration management is an important part of any software application. It he
 
 ## Step 1: Bind the environment variables based on the struct
 
-The first step is to bind the environment variables based on the struct. Then we use reflection to traverse the structure and bind the environment variable based on the respective struct field.
+The first step is traverse the structure and then bind the environment variable based on the respective struct field.
 
 We have defined a `getFlattenKeys` function which takes the prefix and the reflect value as arguments. This function is responsible for returning the flattened keys for configuration. If the value of `v.Kind()` is `reflect.Struct`, we traverse the structure and recursively call the `getFlattenKeys` function. If the value of `v.Kind()` is anything else, we append the prefix to the keys.
 
