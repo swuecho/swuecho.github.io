@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  software_category 
-date:   2023-04-09 10:26 
+date:   2023-04-08 10:26 
 categories: tech 
 ---
 
