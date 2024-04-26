@@ -11,7 +11,7 @@ Django configuration:
 
 Follow the whitenoise tutorial:
 
-https://whitenoise.readthedocs.io/en/stable/django.html
+<https://whitenoise.readthedocs.io/en/stable/django.html>
 
 ```py
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -51,7 +51,3 @@ index 9043edc..eeafc8f 100644
 -VITE_PUBLIC_PATH = '/'
 +VITE_PUBLIC_PATH = '/static'
 ```
-
-
-
-
