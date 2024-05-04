@@ -4,14 +4,16 @@ title: Projects
 permalink: /projects/
 ---
 
-## My Project
+I start to realize that things are fade away too fast. 
+
+## Mine
 
 
 <https://github.com/swuecho/chat>
 
 chat web app for teams, sass with user management and ratelimit, support chatgpt(openai & azure), claude and ollama model
 
-## Other's project
+## Other's 
 
 
 ### Data:
