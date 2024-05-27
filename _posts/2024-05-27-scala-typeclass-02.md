@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  scala typeclass 02 
+title:  scala typeclass 02  -- create typeclass and instance
 date:   2024-05-27 19:33 
 categories: tech 
 ---
