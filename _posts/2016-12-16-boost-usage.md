@@ -10,7 +10,7 @@ because boost header is installed to
 /usr/include/boost
 ```
 
-so you can comple this progrom
+so you can compile this progrom
 
 ```cpp
 #include <iostream>
@@ -25,7 +25,6 @@ int main(){
 ```
 
 for the library which is not header only, it is a bit tricky.
-
 
 ```cpp
 #include <boost/filesystem.hpp>
@@ -48,8 +47,7 @@ int main()
 have to compile with
 
 ```bash
-g++ file_size.cpp -o file_size -std=c++11   -lboost_system -lboost_filesystem  
-
+g++ file_size.cpp -o file_size -std=c++11 -lboost_system -lboost_filesystem  
 ```
 
 the following does not work
