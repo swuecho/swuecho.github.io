@@ -4,9 +4,9 @@ title:  boost usage
 date:   2016-12-16 22:07 
 categories: tech 
 ---
-because boost header is installed to 
+because boost header is installed to
 
-```
+```sh
 /usr/include/boost
 ```
 
