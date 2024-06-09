@@ -6,10 +6,7 @@ def generate_template_file(title):
     title_escape = title.replace(" ", "-")
     date = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
     time = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(minutes=5)).strftime("%Y-%m-%d %H:%M")
-
-    file_path = f"{date}-{title_escape}.md"
-    with open(file_path, 'w+') as fh_file:
-        fh_file.write(f"""
+    template =  f"""
 ---
 layout: post
 title:  {title}
@@ -19,7 +16,11 @@ categories: tech
 
 ```
 ```
-""".strip())
+""".strip()
+
+    file_path = f"{date}-{title_escape}.md"
+    with open(file_path, 'w+') as fh_file:
+        fh_file.write(template)
 
 
 if __name__ == "__main__":
