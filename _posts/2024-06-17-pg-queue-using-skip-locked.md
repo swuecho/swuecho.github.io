@@ -67,3 +67,13 @@ https://news.ycombinator.com/item?id=20020501
     cur.close()
     conn.close()
 ```
+
+## what is skip locked?
+
+https://www.cybertec-postgresql.com/en/skip-locked-one-of-my-favorite-9-5-features/
+
+As you can see, the second row has been excluded because it is already locked. Note that the second user is NOT blocked - it can proceed concurrently. This is highly important because transactions can co-exist nicely.
+
+## a detailed version
+
+https://vladmihalcea.com/database-job-queue-skip-locked/
