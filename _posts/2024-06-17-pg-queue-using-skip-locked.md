@@ -36,7 +36,7 @@ https://news.ycombinator.com/item?id=20020501
         sql = """DELETE FROM message_queue 
     WHERE id = (
       SELECT id
-      FROM message_queue
+      FROM jobs
       WHERE status = 'new'
       ORDER BY created ASC 
       FOR UPDATE SKIP LOCKED
@@ -66,6 +66,12 @@ https://news.ycombinator.com/item?id=20020501
     process_job()
     cur.close()
     conn.close()
+```
+
+```py
+jobs(id, status, attempts, data)
+
+status: new | new_waiting | complete | failed
 ```
 
 ## what is skip locked?
