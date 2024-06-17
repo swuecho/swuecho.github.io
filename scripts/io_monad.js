@@ -21,6 +21,10 @@ class IO {
                 })
         }
 
+        chain(fn) {
+                return fn(this.effect())
+        }
+
         run() {
                 console.log("run", this.name)
                 return this.effect()
