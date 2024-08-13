@@ -8,15 +8,20 @@ I start to realize that things are fade away too fast.
 
 ## Mine
 
-
+### Chat
 <https://github.com/swuecho/chat>
 
 chat web app for teams, sass with user management and ratelimit, support chatgpt(openai & azure), claude and ollama model
 
-## Other's 
+### LogBook
 
+<https://github.com/swuecho/logbook>
 
-### Data:
+log book: simple, easy to use notebook
+
+## Other's
+
+### Data
 
 <https://github.com/cube2222/octosql>
 OctoSQL is a query tool that allows you to join, analyse and transform data from multiple databases and file formats using SQL.
