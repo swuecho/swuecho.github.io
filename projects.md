@@ -4,11 +4,12 @@ title: Projects
 permalink: /projects/
 ---
 
-I start to realize that things are fade away too fast. 
+I start to realize that things are fade away too fast.
 
-## Mine
+## Software I made
 
 ### Chat
+
 <https://github.com/swuecho/chat>
 
 chat web app for teams, sass with user management and ratelimit, support chatgpt(openai & azure), claude and ollama model
@@ -19,7 +20,13 @@ chat web app for teams, sass with user management and ratelimit, support chatgpt
 
 log book: simple, easy to use notebook
 
-## Other's
+### Speaking Practice
+
+<https://github.com/swuecho/audio_practice>
+
+audio studio for practice
+
+## Software I like
 
 ### Data
 
@@ -40,5 +47,9 @@ Note: should be very handy to use in Jupter Notebook.
 <https://github.com/lanthora/candy>
 
 I use it to connect to home server.
+
+<https://www.v2fly.org/guide/start.html>
+
+Most valuable software if you are in certain network.
 
 
