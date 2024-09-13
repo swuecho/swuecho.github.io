@@ -157,6 +157,12 @@ a:visited { color: #205caa; }
   line-height: 1;
 }
 
+.posts .post-info {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
 .posts .post-date {
   display: block;
   font-size: 15px;
