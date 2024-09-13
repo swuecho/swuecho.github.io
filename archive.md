@@ -12,7 +12,15 @@ layout: page
   {% endif %}
   <li class="listing-item">
     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    <div class='post-info'>
+      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+     <!-- Display post categories as tags -->
+      <div class="post-tags">
+          {% for category in post.categories %}
+          <span class="tag">{{ category }}</span>
+          {% endfor %}
+      </div>
+    </div?
   </li>
 {% endfor %}
 </ul>

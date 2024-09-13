@@ -169,11 +169,26 @@ a:visited { color: #205caa; }
   color: #818181;
 }
 
-.post-tags .tag {
+.posts .post-tags .tag {
   border: 1px solid #ccc; 
   padding: 2px 5px; 
   margin-right: 5px;
 }
+
+/* achive */
+
+.listing-item .post-info {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.listing-item .post-tags .tag {
+  border: 1px solid #ccc; 
+  padding: 2px 5px; 
+  margin-right: 5px;
+}
+
 
 
 /* Post styles */
