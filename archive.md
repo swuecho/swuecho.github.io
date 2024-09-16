@@ -20,7 +20,7 @@ layout: page
           <span class="tag">{{ category }}</span>
           {% endfor %}
       </div>
-    </div?
+    </div>
   </li>
 {% endfor %}
 </ul>

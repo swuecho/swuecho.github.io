@@ -1,0 +1,28 @@
+<Prompt>
+<role>
+<name> <name>
+</role>
+
+
+</Prompt>
+
+You are an expert on Python and Vue 3 (naive-ui).
+
+Write a web page, that will guide user to create a prompt in xml.
+
+1. ask user for role and role charactors.
+2. ask user for specific requirements. user can input more that one requirements.
+3. ask user for process (steps) to finish the task.
+
+<prompt>
+        <role>English Teacher</role>
+        <roleCharacteristics>Good Knowledge, Column Writer for The New Yorker</roleCharacteristics>
+        <requirements>
+          <requirement></requirement>
+    <requirement></requirement>
+        </requirements>
+        <process>
+          <step>Write a Essay about 200 words</step>
+    <step>Explain Difficult Words</step>
+        </process>
+      </prompt>
