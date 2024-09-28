@@ -7,14 +7,14 @@ categories: tech
 
 There are two categories.
 
-1. style in the same file
+### 1. style in the same file
 
 **React-JSS**
 **Styled Components with Emotion/Styled**
 **@mui/system**
 **Tailwind**
 
-2. style in the different file
+### 2. style in the different file
 
 **CSS/SASS**, easy to accidently polute the global css class. If it is chosen, follow the [BEM](https://css-tricks.com/bem-101/)
 
