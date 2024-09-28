@@ -5,7 +5,38 @@ date:   2024-09-28 07:18
 categories: tech 
 ---
 
-```md
+There are two categories.
+
+1. style in the same file
+
+**React-JSS**
+**Styled Components with Emotion/Styled**
+**@mui/system**
+**Tailwind**
+
+2. style in the different file
+
+**CSS/SASS**, easy to accidently polute the global css class. If it is chosen, follow the [BEM](https://css-tricks.com/bem-101/)
+
+**CSS Modules**, I think it is quite good.
+
+I like the everything in one file solultion, so three are left.
+
+**React-JSS** : Not in active development. I actualy like to use it. feels straight forward. not much cognitive load.
+
+**Styled Components with Emotion/Styled**: It is good to write custom component based on @mui/material
+
+**Tailwind**: quite good, only disadvantage is you have to config the build pipeline.
+
+**@mui/system**: The example given by LLM is still using mui/system. It is actually in the same level with tailwind css.
+
+In the company I worked. They have a internal design system based on @mui/material. The best approach is to use the internal component and compose the component with @mui/system.
+
+For most developer, if you use a component library, a light weight css framework like tailwind is good (mui/system in the same niche). The libray or framework you use is decided by the work.
+
+
+## LLM's example
+
 Sure! Below is a simple "Todo App" implemented in React using each of the five styling approaches: **React-JSS**, **Styled Components with Emotion/Styled**, **@mui/system**, **CSS/SASS**, and **CSS Modules**.
 
 ### 1. **Todo App with React-JSS**
@@ -455,4 +486,3 @@ Each approach has its own strengths and weaknesses:
 - **@mui/system** is best suited for projects that use Material-UI components and need responsive design and theming capabilities.
 - **CSS/SASS** is a good choice for traditional styling with static styles and a separation of concerns.
 - **CSS Modules** is a middle ground between traditional CSS and scoped styles, ideal for projects that want to avoid CSS conflicts without adopting a full CSS-in-JS solution.
-```
