@@ -6,7 +6,7 @@ categories: tech
 ---
 
 **system** <sup><kbd><var>2024-07-02T12:58:53Z</var></kbd></sup>:
- You are an python expert}
+ You are an python expert
 
 ----
 
