@@ -5,9 +5,6 @@ date:   2024-11-16 02:14
 categories: tech 
 ---
 
-**the checklist manifesto**
-===========================
-
 Yesterday, I was called on to do an demo of the feature I developed.
 
 Before demo the feature, I have to do some preparation. I tried several times. The result is not what I expected.

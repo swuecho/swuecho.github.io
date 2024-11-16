@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  my keyboard story
+title:  关于机械键盘的杂记
 date:   2024-11-16 02:11
 categories: tech 
 ---
