@@ -9,7 +9,7 @@ categories: tech
 
 ## step 1: create a visual cpp project
 
-![hello world](/assets/img/visual_studio_hello_world.png)
+![hello world](/assets/img/visual_studio_hello_world.png =500x)
 
 make sure cpp is running ok
 
@@ -57,3 +57,11 @@ int main() {
 }
 
 ```
+
+## ref
+
+
+https://sonictk.github.io/asm_tutorial/
+
+
+https://stackoverflow.com/questions/20326262/error-lnk2019-unresolved-external-symbol-referenced-in-function-main
