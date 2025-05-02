@@ -7,6 +7,7 @@ categories: tech
 
 isGetter in Jackson
 
+如果你有boolean field 或者 get 是以is 开头, 那么用jackson 处理序列化, 会有麻烦. 比如下面的例子.
 
 ```java
 import lombok.Data;
