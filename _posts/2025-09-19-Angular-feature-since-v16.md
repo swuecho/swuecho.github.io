@@ -212,3 +212,7 @@ Here’s a breakdown of the **major features in Angular v18**:
 - **v16** → Signals (preview), hydration (preview).
 - **v17** → New template syntax (`@if`, `@for`, `@defer`), Vite/esbuild (experimental).
 - **v18** → Zoneless stable, Signals everywhere, Vite/esbuild default, Material 3.
+
+## v19, v20 
+
+seems no major feature.
