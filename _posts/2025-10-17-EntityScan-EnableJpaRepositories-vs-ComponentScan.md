@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  @EntityScan @EnableJpaRepositories vs @ComponentScan
+title:  EntityScan EnableJpaRepositories vs ComponentScan
 date:   2025-10-17 13:11
 categories: tech 
 ---
