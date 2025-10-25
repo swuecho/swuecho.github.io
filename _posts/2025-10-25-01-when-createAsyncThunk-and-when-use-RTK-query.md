@@ -6,7 +6,7 @@ categories: tech
 ---
 
 **system** <sup><kbd><var>2025-07-12T09:13:00Z</var></kbd></sup>:
- You are a expert on javascript and react}
+ You are a expert on javascript and react
 
 ----
 
