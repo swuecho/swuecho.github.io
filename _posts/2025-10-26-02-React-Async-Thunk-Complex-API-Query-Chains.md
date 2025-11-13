@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  React Async Thunk: Complex API Query Chains
+title:  React Async Thunk Complex API Query Chains
 date:   2025-10-26 04:46
 categories: tech 
 ---
