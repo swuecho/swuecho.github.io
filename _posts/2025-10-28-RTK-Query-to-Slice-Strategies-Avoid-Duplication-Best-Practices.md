@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  RTK Query to Slice: Strategies, Avoid Duplication, Best Practices
+title:  RTK Query to Slice Strategies, Avoid Duplication, Best Practices
 date:   2025-10-28 05:12
 categories: tech 
 ---

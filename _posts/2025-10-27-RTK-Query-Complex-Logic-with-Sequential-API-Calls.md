@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  RTK Query: Complex Logic with Sequential API Calls
+title:  RTK Query Complex Logic with Sequential API Calls
 date:   2025-10-27 04:56
 categories: tech 
 ---
